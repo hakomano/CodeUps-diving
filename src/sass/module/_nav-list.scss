@@ -1,0 +1,66 @@
+@use "global" as *;
+
+/* ----- ナビ共通(ドロワーナビ・フッターナビ) ----- */
+.nav-list__items {
+  height: rem(510);
+  display: flex;
+  flex-flow: column wrap;
+  column-gap: rem(1);
+  row-gap: rem(13);
+  margin-inline: auto;
+
+  @include mq(md){
+    height: rem(250);
+    column-gap: rem(37);
+  }
+}
+
+.nav-list__item{
+  position: relative;
+  break-inside: avoid; //要素の途中で折り返しを防止
+}
+
+.nav-list__item a{
+  display: block;
+  padding: rem(12) rem(8);
+  font-size: rem(16);
+  @include line-height(18,16);
+  color: $white;
+  white-space: nowrap;
+
+  @include mq(md){
+    padding: rem(12) rem(10);
+  }
+}
+
+.nav-list__item > a{
+  font-weight: $bold;
+  white-space: nowrap;
+}
+
+.nav-list__item > a::before{
+  content: "";
+  margin-right: rem(4);
+  width: rem(18);
+  height: rem(18);
+  display: inline-block;
+  background-image: url(./../images/common/starfish.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.nav-list__item--indent a{
+  display: block;
+  text-indent: -1.3em;
+  margin-left: 1.3em;
+
+  @include mq(md){
+    text-indent: 0;
+    margin-left: 0;
+  }
+}
+
+.nav-list__child {
+  padding-left: rem(22);
+}
