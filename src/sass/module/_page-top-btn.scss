@@ -1,0 +1,74 @@
+@use "global" as *;
+
+/* ----- トップへ戻るボタン(フッター手前で止まる) ----- */
+.page-top-btn{
+  position: fixed;
+  right: rem(15);
+  bottom: rem(16);
+
+  @include mq(md){
+    right: rem(20);
+    bottom: rem(20);
+  }
+}
+
+.page-top-btn a{
+  display: inline-block;
+  width: rem(48);
+  height: rem(48);
+  border: rem(1) solid $accent-green;
+  border-radius: 50%;
+  background-color: $white;
+  position: relative;
+  z-index: 999;
+  transition: .4s;
+
+  @include mq(md){
+    width: rem(80);
+    height: rem(80);
+  }
+}
+
+.page-top-btn a::before{
+  content: '';
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: rotate(135deg);
+  transform-origin: left top;
+	width: rem(8);
+	height: rem(1);
+	background: $accent-green;
+  transition: .4s;
+
+  @include mq(md){
+    top: 27%;
+  }
+}
+
+.page-top-btn a::after{
+  content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: rem(1);
+	height: rem(28);
+	background: $accent-green;
+  transition: .4s;
+
+  @include mq(md){
+    width: rem(1);
+    height: rem(40);
+  }
+}
+
+//トップへ戻るボタンホバー時(色反転)
+.page-top-btn a:hover{
+  background-color: $accent-green;
+  opacity: 1;
+}
+
+.page-top-btn a:hover::before, .page-top-btn a:hover::after{
+  background: $white;
+}
