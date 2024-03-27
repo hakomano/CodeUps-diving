@@ -1,0 +1,145 @@
+@use "global" as *;
+
+/* ----- 共通CTAセクション ----- */
+.cta__bg {
+  width: 100%;
+  padding: rem(81) rem(15) rem(102);
+  margin-inline: auto;
+  background: url(../images/common/fishes-left.svg) no-repeat;
+  background-position: right 5.2% top 7.2%;
+  background-size: 30% auto;
+
+  @include mq(md){
+    max-width: rem(1340);
+    padding: rem(140) rem(5) rem(160);
+    background-position: right -0.4% top 17.5%;
+    background-size: 23% auto;
+  }
+}
+
+.cta__inner {
+  max-width: rem(600); //タブレット時の間延び防止用
+  width: 100%;
+  margin-inline: auto;
+
+  @include mq(md){
+    max-width: $inner + strip-unit($padding-pc) * 2;
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+}
+
+.cta__container{
+  text-align: center;
+  @include mq(md){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(77) 0;
+    box-shadow: $cta-shadow;
+  }
+}
+
+.cta__info {
+  padding: 0 rem(25);
+
+  @include mq(md){
+    padding: 0;
+    padding-right: calc(82 / 1080 * 100%);
+    padding-left: calc(50 / 1080 * 100%);
+    border-right: rem(1) solid $accent-green;
+  }
+}
+
+.cta__info hr{
+  margin: 0;
+  margin-top: rem(6);
+  background-color: $accent-green;
+
+  @include mq(md){
+    margin-top: rem(8);
+  }
+}
+
+.cta__logo {
+  max-width: rem(174);
+  margin-inline: auto;
+
+  @include mq(md){
+    max-width: rem(200);
+  }
+}
+
+.cta__info-flex {
+  margin-top: rem(15);
+
+  @include mq(md){
+    margin-top: rem(23);
+    display: flex;
+    column-gap: rem(21);
+  }
+}
+
+.cta__info-detail {
+  // @include line-height(24,16);
+  line-height: 1.74;
+
+  @include mq(md){
+    width: calc(146 / 440 * 100%);
+    max-width: 100%;
+    text-align: left;
+  }
+}
+
+.cta__info-detail span{
+  display: inline-block;
+}
+
+.cta__info-map {
+  margin-top: rem(13);
+
+  @include mq(md){
+    margin-top: 0;
+    width: calc(273 / 440 * 100%);
+    max-width: 100%;
+  }
+}
+
+.cta__info-map iframe {
+  aspect-ratio: 295 / 160;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  @include mq(md){
+    aspect-ratio: 273 / 148;
+  }
+}
+
+.cta__link {
+  margin-top: rem(35);
+  padding: 0 rem(15);
+
+  @include mq(md){
+    margin-top: rem(10);
+    padding: 0;
+    padding-left: calc(81 / 1080 * 100%);
+    padding-right: calc(112 / 1080 * 100%);
+  }
+}
+
+.cta__text {
+  margin-top: rem(13);
+  font-size: rem(14);
+  color: $accent-green;
+  @include line-height(18,14);
+
+  @include mq(md){
+    margin-top: rem(13);
+  };
+}
+
+.cta__btn {
+  margin-top: rem(39);
+  margin-right: rem(4); //ボタンをデザインカンプ通り(完全な中央揃えではない配置)にするなら使用
+}
