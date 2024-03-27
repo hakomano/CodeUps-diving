@@ -1,0 +1,103 @@
+@use "global" as *;
+
+/* ----- お客様の声(Voice)カード ----- */
+.voice-card a{
+  display: block;
+  height: 100%;
+  padding: rem(15) rem(16) rem(24);
+  box-shadow: $card-shadow;
+
+  @include mq(md){
+    padding: rem(24);
+  }
+}
+
+.voice-card__info{
+  display: flex;
+  column-gap: rem(13);
+  align-items: end;
+
+  @include mq(md){
+    column-gap: rem(16);
+  }
+}
+
+.voice-card__infoBox{
+  display: flex;
+  flex-direction: column;
+  width: calc(149 / 313 * 100%);
+  max-width: 100%;
+
+  @include mq(md){
+    width: calc(276 / 472 * 100%);
+  }
+}
+
+.voice-card__user{
+  display: flex;
+  flex-direction: column;
+
+  @include mq(md){
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+  }
+}
+
+.voice-card__age-gender{
+  font-size: rem(12);
+  @include line-height(18,12)
+}
+
+.voice-card__title{
+  margin-top: rem(3);
+  font-size: rem(16);
+  font-weight: $medium;
+  padding-bottom: rem(3);
+  border-bottom: rem(1) solid $accent-green;
+  //3行を超えると三点リーダーで省略する
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+
+  @include mq(md){
+    margin-top: rem(7.5);
+    font-size: rem(24);
+    padding-bottom: rem(2);
+    //2行を超えると三点リーダーで省略する
+    -webkit-line-clamp: 2;
+  }
+}
+
+.voice-card__img{
+  width: calc(151 / 313 * 100%);
+  max-width: 100%;
+
+  @include mq(md){
+    width: calc(180 / 472 * 100%);
+  }
+}
+
+.voice-card__img img{
+  aspect-ratio: 180 / 140;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.voice-card__text{
+  margin-top: rem(16);
+  @include line-height(24,16);
+  //10行を超えると三点リーダーで省略する
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
+
+  @include mq(md){
+    margin-top: rem(40);
+    //7行を超えると三点リーダーで省略する
+    -webkit-line-clamp: 7;
+  }
+}
