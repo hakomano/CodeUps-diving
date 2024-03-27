@@ -42,9 +42,10 @@
 }
 
 .pc-nav__item .ja{
-  margin-top: rem(8);
+  margin-top: rem(4);
   display: block;
   font-size: rem(10);
+  @include line-height(15,10);
 }
 
 .pc-nav__item a:hover{

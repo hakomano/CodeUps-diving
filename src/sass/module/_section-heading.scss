@@ -13,15 +13,15 @@
 }
 
 .section-heading span {
+  margin-top: rem(11);
   font-size: rem(12);
   font-family: $base-font-family;
   font-weight: $regular;
   color: $accent-green;
   display: block;
-  padding-top: rem(9);
 
   @include mq(md){
-    padding-top: rem(10);
+    margin-top: rem(10);
   }
 }
 

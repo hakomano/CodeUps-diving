@@ -33,12 +33,12 @@
 }
 
 .footer__sns{
-  margin-top: rem(11);
+  margin-top: rem(12);
   display: flex;
   column-gap: rem(16);
 
   @include mq(md){
-    margin-top: rem(20);
+    margin-top: rem(25);
     margin-left: rem(40);
   }
 }
@@ -59,11 +59,11 @@
 }
 
 .footer__list{
-  margin-top: rem(27);
+  margin-top: rem(26);
   margin-left: rem(-8);
 
   @include mq(md){
-    margin-top: rem(1);
+    margin-top: rem(2);
     margin-left: rem(-10);
   }
 }

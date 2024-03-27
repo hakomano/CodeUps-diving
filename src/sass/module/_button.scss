@@ -5,7 +5,7 @@
   max-width: 100%;
   display: inline-block; //blockではなくinline-blockの方が親要素で中央揃えなどの指定ができる
 
-  padding: rem(15) rem(10);
+  padding: rem(16) rem(10);
   border: rem(1) solid $accent-green;
   background: $accent-green;
   color: $white;

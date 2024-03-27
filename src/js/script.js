@@ -109,6 +109,16 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
 
+  //========================================================*
+  // フッター表示されたら追従ヘッダーを非表示
+  //========================================================*
+  $(".footer").on('inview', function(event, isInViewHeader){
+    if (isInViewHeader) {
+      $(".js-header").fadeOut();
+    } else {
+      $(".js-header").fadeIn();
+    }
+  })
 
 
 });
