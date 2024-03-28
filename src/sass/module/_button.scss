@@ -1,18 +1,18 @@
 @use "global" as *;
 /* ----- 共通ボタン ----- */
 .button a{
-  width: rem(202); //全ボタン同じ幅：BEM設計としてはブロックに特定のwidthは入れない?
+  width: rem(202); //BEM設計としてはブロックに特定のwidthは入れない?
   max-width: 100%;
   display: inline-block; //blockではなくinline-blockの方が親要素で中央揃えなどの指定ができる
 
-  padding: rem(16) rem(10);
+  padding: rem(15) rem(40);
   border: rem(1) solid $accent-green;
   background: $accent-green;
   color: $white;
   font-size: rem(14);
   font-family: $english-font-family;
   @include line-height(22,14);
-  text-align: center;
+  text-align: left;
   position: relative;
   z-index: 1;
   // overflow: hidden;
@@ -30,7 +30,6 @@
 
 .button span{
   display: inline-block;
-  padding-right: rem(48);
 }
 
 .button span::first-letter{
