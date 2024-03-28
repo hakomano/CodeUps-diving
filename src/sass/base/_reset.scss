@@ -115,7 +115,8 @@ select::-ms-expand {
 a {
   text-decoration: none;
   color: inherit;
-  transition: opacity .4s transform .3s;
+  transition: .3s;
+  // transition: opacity .4s transform .3s;
 }
 
 a:hover{

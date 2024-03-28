@@ -1,0 +1,90 @@
+@use "global" as *;
+
+/* ----- トップページのinformationセクション ----- */
+.top-info{
+  background-color: $sub-green;
+}
+
+.top-info__inner{
+  padding-top: rem(84);
+  padding-bottom: rem(84);
+
+  @include mq(md){
+    padding-top: rem(100);
+    padding-bottom: rem(78);
+  }
+}
+
+.top-info__container{
+  margin-top: rem(33);
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+
+  @include mq(md){
+    margin-top: rem(41);
+    flex-direction: row;
+    gap: rem(48);
+    align-items: center;
+  }
+}
+
+.top-info__img{
+  display: block;
+  margin-inline: auto;
+  max-width: rem(600);  //タブレット時の間延び防止用
+  width: 100%;
+
+  @include mq(md){
+    width: calc(540 / 1080 * 100%);
+    max-width: 100%;
+  }
+}
+
+.top-info__img img{
+  aspect-ratio: 345 / 227;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  @include mq(md){
+    aspect-ratio: 540 / 356;
+  }
+}
+
+.top-info__text-content{
+  margin-inline: auto;
+  max-width: rem(500);  //タブレット時の間延び防止用
+  width: 100%;
+
+
+  @include mq(md){
+    width: calc(492 / 1080 * 100%);
+    max-width: 100%;
+  }
+}
+
+.top-info__title{
+  font-size: rem(20);
+  font-weight: $bold;
+  @include line-height(24,20);
+  border-bottom: 1px solid $accent-green;
+  padding-bottom: rem(4);
+
+  @include mq(md){
+    font-size: rem(24);
+    line-height: 1;
+    padding-bottom: rem(8);
+  }
+}
+
+.top-info__text{
+  margin-top: rem(8);
+  @include line-height(24,16);
+}
+
+.top-info__btn{
+  margin-top: rem(39);
+  text-align: center;
+  margin-right: rem(4); //ボタンをデザインカンプ通り(完全な中央揃えではない配置)にするなら使用
+}

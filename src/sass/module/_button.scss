@@ -12,6 +12,7 @@
   font-size: rem(14);
   font-family: $english-font-family;
   @include line-height(22,14);
+  text-align: center;
   position: relative;
   z-index: 1;
   // overflow: hidden;
@@ -98,6 +99,7 @@
   border: rem(1) solid $white;
   background: $white;
   color: $accent-green;
+  text-transform: capitalize;
 }
 
 .button--reversal a > div{
