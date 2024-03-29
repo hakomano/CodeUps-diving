@@ -126,6 +126,49 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   //========================================================*
+  // キャンペーンスライダー(swiper)
+  //========================================================*
+  // リサイズ処理（PC時のみ矢印表示）
+  const campaignSlideLength = document.querySelectorAll('.js-campaign-swiper .swiper-slide').length
+  $(window).resize(function () {
+    campaign_arrow();
+  });
+  campaign_arrow();
+  function campaign_arrow() {
+    if (window.matchMedia('(max-width: 767px)').matches || campaignSlideLength <= 3) {
+        $('.js-campaign-arrow').hide();
+    } else {
+        $('.js-campaign-arrow').show();
+    }
+  }
+
+  // Swiper(キャンペーンスライダー)
+  const campaignSwiper = new Swiper(".js-campaign-swiper", {
+    loop: true,//無限ループさせる
+    speed: 2000,//スライド切替アニメーションのスピードを指定(ミリ秒)
+    slidesPerView: '1.26',//表示させるスライド数(CSSでサイズ指定する場合は'auto')
+    spaceBetween: 24,//スライド間の余白を指定(px)
+    autoplay: {
+        delay: 2000,//次のスライドに切り替わるまでの時間を指定（ミリ秒）
+        disableOnInteraction: false,//ユーザーが操作時に自動再生止めない
+    },
+    breakpoints: {
+        768: { //タブレット時(カードが小さくなりすぎないように)
+            slidesPerView: "2.5",
+            spaceBetween: 30,
+        },
+        1230: {
+            slidesPerView: "3.5",
+            spaceBetween: 40,
+        },
+    },
+    navigation: {
+        nextEl: ".top-campaign__btn-next",
+        prevEl: ".top-campaign__btn-prev",
+    },
+  });
+
+  //========================================================*
   // 背景色の後に画像やテキストが表示されるエフェクトアニメーション
   //========================================================*
   //要素の取得とスピードの設定

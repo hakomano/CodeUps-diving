@@ -1,0 +1,98 @@
+@use "global" as *;
+
+/* ----- キャンペーンカード ----- */
+.campaign-card a{
+  display: block;
+  height: 100%;
+  box-shadow: $card-shadow;
+}
+
+.campaign-card__img img{
+  aspect-ratio: 280 / 188;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  @include mq(md){
+    aspect-ratio: 333 / 223;
+  }
+}
+
+.campaign-card__content{
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: rem(16) rem(16) rem(24);
+
+  @include mq(md){
+    padding: rem(24) rem(16) rem(40);
+  }
+}
+
+.campaign-card__title{
+  font-size: rem(16);
+  font-weight: $medium;
+  @include line-height(24,16);
+  border-bottom: rem(1) solid $accent-green;
+  padding-bottom: rem(8);
+  margin-top: rem(6);
+  flex-grow: 1;
+
+  @include mq(md){
+    margin-top: rem(4);
+    padding-bottom: rem(7);
+  }
+}
+
+.campaign-card__bottom{
+  padding-top: rem(7.5);
+
+  @include mq(md){
+    padding-top: rem(16);
+  }
+}
+
+.campaign-card__text{
+  text-align: center;
+  font-size: rem(14);
+  @include line-height(24,14);
+
+  @include mq(md){
+    font-size: rem(16);
+    @include line-height(24,16);
+  }
+}
+
+.campaign-card__price{
+  display: flex;
+  padding-top: rem(8);
+  align-items: baseline;
+  justify-content: center;
+  font-weight: $bold;
+  font-family: $second-en-font-family;
+  line-height: 1;
+}
+
+.campaign-card__original-price{
+  padding-right: rem(18);
+  font-size: rem(20);
+  text-decoration: line-through;
+  text-decoration-style:solid;
+  text-decoration-thickness: rem(3);
+  text-decoration-color: #C94800;
+
+  @include mq(md){
+    padding-right: rem(24);
+    font-size: rem(24);
+  }
+}
+
+.campaign-card__cut-price{
+  font-size: rem(32);
+  color: $accent-green;
+
+
+  @include mq(md){
+    font-size: rem(40);
+  }
+}

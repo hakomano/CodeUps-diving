@@ -1,0 +1,135 @@
+@use "global" as *;
+
+/* ----- トップページのcampaignセクション ----- */
+.top-campaign{
+  overflow: hidden;
+  padding-top: rem(45);
+  padding-bottom: rem(10);
+
+  @include mq(md){
+    padding-top: rem(120);
+    padding-bottom: rem(24);
+  }
+}
+
+.top-campaign__inner{
+  width: 100%;
+  padding-right: $padding-sp;
+  padding-left: $padding-sp;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq(md) {
+    max-width: calc($inner + calc(180 / 1440 * 100%) * 2);
+    padding-right: calc(180 / 1440 * 100%);
+    padding-left: calc(180 / 1440 * 100%);
+  }
+}
+
+//スライダー前後ボタン
+.top-campaign__swiper-btn{
+  display: none;
+
+  @include mq(md){
+    margin-top: rem(-62);
+    margin-left: auto;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: rem(80);
+  }
+}
+
+.top-campaign__btn-next{
+  right: auto;
+}
+
+.top-campaign__btn-prev, .top-campaign__btn-next{
+  @include mq(md){
+    position: relative;
+    margin: 0;
+    width: rem(80);
+    height: rem(80);
+    border: rem(1) solid $accent-green;
+    border-radius: 50%;
+    background-color: $white;
+    transition: .4s;
+    cursor: pointer;
+  }
+}
+
+.top-campaign__btn-prev::before{
+  @include mq(md){
+    content: '';
+    position: absolute;
+    width: rem(40);
+    height: rem(8);
+    border-bottom: rem(1) solid $accent-green;
+    border-left: rem(1) solid $accent-green;
+    top: 50%;
+    left: 55%;
+    transform: translate(-55%, -50%) skew(-45deg);
+    transition: .4s;
+  }
+}
+
+.top-campaign__btn-next::before{
+  @include mq(md){
+    content: '';
+    position: absolute;
+    width: rem(40);
+    height: rem(8);
+    border-bottom: rem(1) solid $accent-green;
+    border-right: rem(1) solid $accent-green;
+    top: 48%;
+    left: 45%;
+    transform: translate(-45%, -48%) skew(45deg);
+    transition: .4s;
+  }
+}
+
+//スライダー前後ボタンホバー時(色反転)
+.top-campaign__btn-prev:hover, .top-campaign__btn-next:hover{
+  @include mq(md){
+    border: rem(1) solid $white;
+    background-color: $accent-green;
+  }
+}
+
+.top-campaign__btn-prev:hover::before{
+  @include mq(md){
+    border-bottom: rem(1) solid $white;
+    border-left: rem(1) solid $white;
+  }
+}
+
+.top-campaign__btn-next:hover::before{
+  @include mq(md){
+    border-bottom: rem(1) solid $white;
+    border-right: rem(1) solid $white;
+  }
+}
+
+//スライダー前後ボタンクリック時
+.top-campaign__btn-prev:active, .top-campaign__btn-next:active{
+  @include mq(md){
+    transform: scale(0.9);
+  }
+}
+
+.top-campaign__swiper{
+  margin-right: calc(50% - 50vw);
+  padding-top: rem(32);
+  padding-bottom: rem(39);
+
+  @include mq(md){
+    padding-top: rem(25);
+    padding-bottom: rem(79);
+  }
+}
+
+.top-campaign__btn {
+  text-align: center;
+  margin-right: rem(4); //ボタンをデザインカンプ通り(完全な中央揃えではない配置)にするなら使用
+}
