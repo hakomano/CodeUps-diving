@@ -130,10 +130,14 @@
 
 .header__drawer-nav{
   margin-top: rem(12);
-  margin-left: rem(-8);
+  margin-inline: auto;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   max-width: rem(500);
   width: 100%;
+}
+
+.header__drawer-nav > ul{
+  margin-left: rem(-8);
 }

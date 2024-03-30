@@ -1,6 +1,62 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
+  //========================================================*
+  // ローディングアニメーション
+  //========================================================*
+  $(function () {
+    $(window).on('load', function () {
+      //ページを開いて1秒後にテキストを0.6秒かけて非表示
+      $('.js-loader-title').delay(1000).fadeOut(600);
+
+      //2つに分かれた画像がスライドアップ(右の画像が80px遅れ)最終的に1枚の画像になる
+      $('.js-loader-left').delay(1200).addClass("slideUp");
+      $('.js-loader-right').delay(1300).addClass("slideUp");
+
+      //画像が出て数秒後にタイトルが浮き出る(カラーが白に変わる)
+      $('.js-loader-title').hide();
+      $('.js-loader-title').delay(2000).css("color","white").fadeIn(600);
+
+      //ページを開いて5秒後にローダー画面をゆっくり非表示
+      $('.js-loader').delay(5000).fadeOut('slow');
+    });
+
+    //ページ読み込みが終わってなくても5秒後にはローディング画面を非表示(ユーザー離脱防止)
+    setTimeout(function(){
+      $('.js-loader').fadeOut('slow');
+    },5000);
+  });
+
+
+  //ローディング画面を初回一回目のみ表示(同ブラウザ上で)の場合はこちら
+
+  // $(function () {
+  //   if (sessionStorage.getItem('visit')) {
+  //     $(".js-loader").css("display", "none");
+  //   } else {
+  //     sessionStorage.setItem('visit', 'true');
+  //     $(window).on('load', function () {
+  //       //ページを開いて1秒後にテキストを0.6秒かけて非表示
+  //       $('.js-loader-title').delay(1000).fadeOut(600);
+
+  //       //2つに分かれた画像がスライドアップ(右の画像が80px遅れ)最終的に1枚の画像になる
+  //       $('.js-loader-left').delay(1200).addClass("slideUp");
+  //       $('.js-loader-right').delay(1300).addClass("slideUp");
+
+  //       //画像が出て数秒後にタイトルが浮き出る(カラーが白に変わる)
+  //       $('.js-loader-title').hide();
+  //       $('.js-loader-title').delay(2000).css("color","white").fadeIn(600);
+
+  //       //ページを開いて5秒後にローダー画面をゆっくり非表示
+  //       $('.js-loader').delay(5000).fadeOut('slow');
+  //     });
+
+  //     //ページ読み込みが終わってなくても5秒後にはローディング画面を非表示(ユーザー離脱防止)
+  //     setTimeout(function(){
+  //       $('.js-loader').fadeOut('slow');
+  //     },5000);
+  //   }
+  // });
 
   //========================================================*
   // ハンバーガーメニュー(フェードイン・アウト)
@@ -39,13 +95,24 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   }
 
   //========================================================*
+  // フッター表示されたら追従ヘッダーを非表示
+  //========================================================*
+  $(".footer").on('inview', function(event, isInViewHeader){
+    if (isInViewHeader) {
+      $(".js-header").fadeOut();
+    } else {
+      $(".js-header").fadeIn();
+    }
+  });
+
+  //========================================================*
   // ページトップボタン処理(フッター手前で止まる)
   //========================================================*
   $(function (){
     const pageTop = $(".js-page-top");
 
     //トップへ戻るボタンのクリックイベント
-    // pageTop.on("click", scrollTop);
+    pageTop.on("click", scrollTop);
     $(window).on("scroll", function() {
       btnScrollEvent();
       btnPosition();
@@ -197,16 +264,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
 
-  //========================================================*
-  // フッター表示されたら追従ヘッダーを非表示
-  //========================================================*
-  $(".footer").on('inview', function(event, isInViewHeader){
-    if (isInViewHeader) {
-      $(".js-header").fadeOut();
-    } else {
-      $(".js-header").fadeIn();
-    }
-  })
+  
 
 
 });
