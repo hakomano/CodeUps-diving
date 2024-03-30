@@ -3,17 +3,18 @@
 /* ----- 共通CTAセクション ----- */
 .cta__bg {
   width: 100%;
-  padding: rem(81) rem(15) rem(105);
+  padding: rem(54) rem(15) rem(105);
   margin-inline: auto;
   background: url(../images/common/fishes-left.svg) no-repeat;
-  background-position: right 5.2% top 7.2%;
-  background-size: 30% auto;
+  background-position: right top;
+  background-size: 31.5% auto;
+  background-origin: content-box; //背景を描画する起点をパディング領域の内側の左上角にする
 
   @include mq(md){
-    max-width: rem(1340);
-    padding: rem(139) rem(5) rem(163);
-    background-position: right -0.4% top 17.5%;
-    background-size: 23% auto;
+    max-width: rem(1340) + rem(30);  //イラストのインナー幅+左右余白(15✕2)
+    padding: rem(100) rem(15) rem(163);
+    background-position: right top;
+    background-size: 22.5% auto;
   }
 }
 
@@ -21,11 +22,13 @@
   max-width: rem(600); //タブレット時の間延び防止用
   width: 100%;
   margin-inline: auto;
+  padding-top: rem(27);
 
   @include mq(md){
     max-width: $inner + strip-unit($padding-pc) * 2;
     padding-right: $padding-pc;
     padding-left: $padding-pc;
+    padding-top: rem(36);
   }
 }
 

@@ -6,20 +6,16 @@
   padding-bottom: rem(75);
 
   @include mq(md){
-    max-width: rem(1274) + rem(30);  //イラストのインナー幅+左右余白(15✕2)
+    max-width: rem(1284);
     width: 100%;
-    padding: rem(120) rem(15) rem(73); //
+    padding-top: rem(120);
+    padding-bottom: rem(165);
+    padding-left: rem(5);
+    padding-right: rem(5);
     margin-inline: auto;
     background: url(../images/common/coral.svg) no-repeat;
-    background-position: right bottom; //
-    background-size: 15.3% auto;
-    background-origin: content-box; //背景を描画する起点をパディング領域の内側の左上角にする
-  }
-}
-
-.top-about__inner{
-  @include mq(md){
-    padding-bottom: rem(90); //イラストの下まで
+    background-position: right 0.5% bottom 8.5%;
+    background-size: 15% auto;
   }
 }
 
