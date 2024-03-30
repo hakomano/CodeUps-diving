@@ -6,20 +6,20 @@
 }
 
 .top-price__bg{
-  padding-top: rem(84);
+  padding-top: rem(85);
   padding-bottom: rem(84);
 
   @include mq(md){
     max-width: rem(1250);
     width: 100%;
-    padding-top: rem(101);
+    padding-top: rem(100);
     padding-bottom: rem(103);
     padding-left: rem(5);
     padding-right: rem(5);
     margin-right: auto;
     margin-left: auto;
     background: url(../images/common/fishes-left.svg) no-repeat;
-    background-position: left 0.1% bottom 5%;
+    background-position: left 0.1% bottom 5.7%;
     background-size: 35.6% auto;
   }
 }

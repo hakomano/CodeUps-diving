@@ -23,6 +23,10 @@
 
 .price-list__block + .price-list__block{
   margin-top: rem(39);
+
+  @include mq(md){
+    margin-top: rem(39);
+  }
 }
 
 .price-list__item dt{

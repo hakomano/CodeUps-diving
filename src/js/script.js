@@ -158,7 +158,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             spaceBetween: 30,
         },
         1230: {
-            slidesPerView: "3.5",
+            slidesPerView: "3.49",
             spaceBetween: 40,
         },
     },

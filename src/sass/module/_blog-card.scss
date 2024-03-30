@@ -24,6 +24,10 @@
 .blog-card__content {
   padding: rem(3) rem(16) rem(24);
   text-align: left;
+
+  @include mq(md){
+    padding: rem(2) rem(16) rem(24);
+  }
 }
 
 .blog-card__date {
