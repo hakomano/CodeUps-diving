@@ -115,7 +115,7 @@
   display: block;
   aspect-ratio: 295 / 160;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 
   @include mq(md){

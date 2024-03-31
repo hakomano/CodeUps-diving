@@ -111,8 +111,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   $(function (){
     const pageTop = $(".js-page-top");
 
-    //トップへ戻るボタンのクリックイベント
-    pageTop.on("click", scrollTop);
+    //トップへ戻るボタンのスクロールイベント
     $(window).on("scroll", function() {
       btnScrollEvent();
       btnPosition();
@@ -129,12 +128,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       return false;
     });
 
-    //700pxスクロールしたらボタンを表示・非表示
+    //500pxスクロールしたらボタンを表示・非表示
     function btnScrollEvent() {
-      if ($(window).scrollTop() > 700) {
-        pageTop.fadeIn(); // 700px以上スクロールしたら表示
+      if ($(window).scrollTop() > 500) {
+        pageTop.fadeIn(); // 500px以上スクロールしたら表示
       } else {
-        pageTop.fadeOut(); //スクロールが700px以下の場合、非表示
+        pageTop.fadeOut(); //スクロールが500px以下の場合、非表示
       }
     }
 
