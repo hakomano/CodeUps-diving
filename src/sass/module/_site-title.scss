@@ -16,7 +16,7 @@
 }
 
 .site-title__main {
-  font-size: rem(40);
+  font-size: clamp(2.5rem, 1.62rem + 3.76vw, 5rem); //最小40px 最大80px
   font-family: $second-en-font-family;
   font-weight: $regular;
   text-transform: uppercase;
@@ -25,7 +25,6 @@
   padding-left: rem(20);
 
   @include mq(md){
-    font-size: rem(80);
     @include line-height(100,80);
     padding-left: rem(40);
   }

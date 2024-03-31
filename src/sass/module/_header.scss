@@ -28,13 +28,13 @@
 }
 
 .header__logo {
-  max-width: rem(102);
+  max-width: rem(104);
   height: inherit;
   position: relative;
   z-index: 999;
 
   @include mq(md) {
-    max-width: rem(133);
+    max-width: rem(137);
   }
 }
 

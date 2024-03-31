@@ -106,7 +106,7 @@
 }
 
 .top-about__title{
-  font-size: rem(40);
+  font-size: clamp(2.5rem, 1.62rem + 3.76vw, 5rem); //最小40px 最大80px
   font-weight: $regular;
   font-family: $english-font-family;
   line-height: 1;
@@ -114,7 +114,7 @@
 
   @include mq(md){
     width: calc(400 / 840 * 100%);
-    font-size: rem(80);
+    max-width: 100%;
     @include line-height(100,80);
     color: $white;
   }

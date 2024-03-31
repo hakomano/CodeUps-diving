@@ -51,7 +51,7 @@
 
 .voice-card__title{
   margin-top: rem(3);
-  font-size: rem(16);
+  font-size: clamp(1rem, 0.824rem + 0.75vw, 1.5rem); //最小16px 最大24px
   font-weight: $medium;
   padding-bottom: rem(3);
   border-bottom: rem(1) solid $accent-green;
@@ -63,7 +63,6 @@
 
   @include mq(md){
     margin-top: rem(7.5);
-    font-size: rem(24);
     padding-bottom: rem(2);
     //2行を超えると三点リーダーで省略する
     -webkit-line-clamp: 2;
