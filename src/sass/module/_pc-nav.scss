@@ -48,10 +48,6 @@
   @include line-height(15,10);
 }
 
-.pc-nav__item a:hover{
-  opacity: 1;
-}
-
 //ホバーしたら下線が真ん中から広がるように表示
 .pc-nav__item a::after {
   content: '';
@@ -68,6 +64,21 @@
   transform-origin: center top;/*上部中央基点*/
 }
 
-.pc-nav__item a:hover::after {
-  transform: scale(1, 1);/*X方向にスケール拡大*/
+@media (hover: hover) {
+  // hoverが使える端末(PC)
+  .pc-nav__item a:hover{
+    opacity: 1;
+  }
+  .pc-nav__item a:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
+  }
+}
+@media (hover: none) {
+  // hoverが使えない端末(スマホ・タブレット)
+  .pc-nav__item a:active{
+    opacity: 1;
+  }
+  .pc-nav__item a:active::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
+  }
 }

@@ -57,6 +57,7 @@
     background-color: $white;
     transition: .4s;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
