@@ -61,7 +61,25 @@
 }
 
 //ブログカードのボタンホバー時(拡大)
-.blog-card a:hover{
-  transform: scale(1.1);
-  opacity: 1;
+@media (hover: hover) {
+  // hoverが使える端末(PC)
+  .blog-card a:hover{
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  .blog-card a:active{
+    transform: scale(0.9);
+  }
 }
+@media (hover: none) {
+  // hoverが使えない端末(スマホ・タブレット)
+  .blog-card a:active{
+    transform: scale(0.9);
+    opacity: 1;
+  }
+}
+
+// .blog-card a:hover{
+//   transform: scale(1.1);
+//   opacity: 1;
+// }

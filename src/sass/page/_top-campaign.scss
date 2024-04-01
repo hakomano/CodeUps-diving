@@ -91,33 +91,83 @@
 }
 
 //スライダー前後ボタンホバー時(色反転)
-.top-campaign__btn-prev:hover, .top-campaign__btn-next:hover{
-  @include mq(md){
-    border: rem(1) solid $white;
-    background-color: $accent-green;
+@media (hover: hover) {
+  // hoverが使える端末(PC)
+  .top-campaign__btn-prev:hover, .top-campaign__btn-next:hover{
+    @include mq(md){
+      border: rem(1) solid $white;
+      background-color: $accent-green;
+    }
+  }
+  .top-campaign__btn-prev:hover::before{
+    @include mq(md){
+      border-bottom: rem(1) solid $white;
+      border-left: rem(1) solid $white;
+    }
+  }
+  .top-campaign__btn-next:hover::before{
+    @include mq(md){
+      border-bottom: rem(1) solid $white;
+      border-right: rem(1) solid $white;
+    }
+  }
+  //スライダー前後ボタンクリック時
+  .top-campaign__btn-prev:active, .top-campaign__btn-next:active{
+    @include mq(md){
+      transform: scale(0.9);
+    }
+  }
+}
+@media (hover: none) {
+  // hoverが使えない端末(スマホ・タブレット)
+  .top-campaign__btn-prev:active, .top-campaign__btn-next:active{
+    @include mq(md){
+      border: rem(1) solid $white;
+      background-color: $accent-green;
+      transform: scale(0.9);
+    }
+  }
+  .top-campaign__btn-prev:active::before{
+    @include mq(md){
+      border-bottom: rem(1) solid $white;
+      border-left: rem(1) solid $white;
+    }
+  }
+  .top-campaign__btn-next:active::before{
+    @include mq(md){
+      border-bottom: rem(1) solid $white;
+      border-right: rem(1) solid $white;
+    }
   }
 }
 
-.top-campaign__btn-prev:hover::before{
-  @include mq(md){
-    border-bottom: rem(1) solid $white;
-    border-left: rem(1) solid $white;
-  }
-}
+// .top-campaign__btn-prev:hover, .top-campaign__btn-next:hover{
+//   @include mq(md){
+//     border: rem(1) solid $white;
+//     background-color: $accent-green;
+//   }
+// }
 
-.top-campaign__btn-next:hover::before{
-  @include mq(md){
-    border-bottom: rem(1) solid $white;
-    border-right: rem(1) solid $white;
-  }
-}
+// .top-campaign__btn-prev:hover::before{
+//   @include mq(md){
+//     border-bottom: rem(1) solid $white;
+//     border-left: rem(1) solid $white;
+//   }
+// }
+
+// .top-campaign__btn-next:hover::before{
+//   @include mq(md){
+//     border-bottom: rem(1) solid $white;
+//     border-right: rem(1) solid $white;
+//   }
+// }
 
 //スライダー前後ボタンクリック時
-.top-campaign__btn-prev:active, .top-campaign__btn-next:active{
-  @include mq(md){
-    transform: scale(0.9);
-  }
-}
+// .top-campaign__btn-prev:active, .top-campaign__btn-next:active{
+//   @include mq(md){
+//     transform: scale(0.9);
+//   }
+// }
 
 .top-campaign__swiper{
   margin-right: calc(50% - 50vw);

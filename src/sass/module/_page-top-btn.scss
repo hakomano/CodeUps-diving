@@ -64,11 +64,32 @@
 }
 
 //トップへ戻るボタンホバー時(色反転)
-.page-top-btn a:hover{
-  background-color: $accent-green;
-  opacity: 1;
+@media (hover: hover) {
+  // hoverが使える端末(PC)
+  .page-top-btn a:hover{
+    background-color: $accent-green;
+    opacity: 1;
+  }
+  .page-top-btn a:hover::before, .page-top-btn a:hover::after{
+    background: $white;
+  }
+}
+@media (hover: none) {
+  // hoverが使えない端末(スマホ・タブレット)
+  .page-top-btn a:active{
+    background-color: $accent-green;
+    opacity: 1;
+  }
+  .page-top-btn a:active::before, .page-top-btn a:active::after{
+    background: $white;
+  }
 }
 
-.page-top-btn a:hover::before, .page-top-btn a:hover::after{
-  background: $white;
-}
+// .page-top-btn a:hover{
+//   background-color: $accent-green;
+//   opacity: 1;
+// }
+
+// .page-top-btn a:hover::before, .page-top-btn a:hover::after{
+//   background: $white;
+// }

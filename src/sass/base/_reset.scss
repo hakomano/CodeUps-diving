@@ -120,13 +120,21 @@ a {
   // transition: opacity .4s transform .3s;
 }
 
-a:hover{
-  opacity: .4;
+@media (hover: hover) {
+  /* hoverが使える端末 PC想定 */
+  a:hover {
+    opacity: .4;
+  }
+  /* クリック時(クリックしたことが分かりやすいように) */
+  a:active{
+    transform: scale(0.9);
+  }
 }
-
-/* クリック時(クリックしたことが分かりやすいように) */
-a:active{
-  transform: scale(0.9);
+@media (hover: none) {
+  /* hoverが使えない端末 スマホ・タブレット想定 */
+  a:active {
+    transform: scale(0.9);
+  }
 }
 
 /* safariの青い線を消す */
