@@ -22,6 +22,7 @@
   position: relative;
   z-index: 999;
   transition: .4s;
+  -webkit-tap-highlight-color: transparent;
 
   @include mq(md){
     width: rem(80);
@@ -73,23 +74,18 @@
   .page-top-btn a:hover::before, .page-top-btn a:hover::after{
     background: $white;
   }
+  .page-top-btn a:active{
+    transform: scale(0.9);
+  }
 }
 @media (hover: none) {
   // hoverが使えない端末(スマホ・タブレット)
   .page-top-btn a:active{
     background-color: $accent-green;
     opacity: 1;
+    transform: scale(0.9);
   }
   .page-top-btn a:active::before, .page-top-btn a:active::after{
     background: $white;
   }
 }
-
-// .page-top-btn a:hover{
-//   background-color: $accent-green;
-//   opacity: 1;
-// }
-
-// .page-top-btn a:hover::before, .page-top-btn a:hover::after{
-//   background: $white;
-// }

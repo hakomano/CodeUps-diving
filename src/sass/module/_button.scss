@@ -15,6 +15,7 @@
   text-align: left;
   position: relative;
   z-index: 1;
+  -webkit-tap-highlight-color: transparent;
   // overflow: hidden;
 }
 
@@ -129,7 +130,6 @@
   .button a:active{
     transform: translate(rem(4), rem(4));
   }
-
   .button a:active div{
     opacity: 0;
   }
@@ -137,64 +137,10 @@
 @media (hover: none) {
   // hoverが使えない端末 スマホ・タブレット想定
   .button a:active {
-    color: $accent-green;
     opacity: 1;
+    transform: translate(rem(4), rem(4));
   }
-  .button a:active span::before{
-    border-top: rem(1) solid $accent-green;
-  }
-  .button a:active span::after{
-    background: $accent-green;
-  }
-  .button a:active::after{
-    transform: scale(1, 1);
-  }
-  // 色反転ボタン時
-  .button--reversal a:active{
-    color: $white;
-  }
-  .button--reversal a:active span::before{
-    border-top: rem(1) solid $white;
-  }
-  .button--reversal a:active span::after{
-    background: $white;
+  .button a:active div{
+    opacity: 0;
   }
 }
-
-// .button a:hover {
-//   color: $accent-green;
-//   opacity: 1;
-// }
-
-// .button a:hover span::before{
-//   border-top: rem(1) solid $accent-green;
-// }
-
-// .button a:hover span::after{
-//   background: $accent-green;
-// }
-
-// .button a:hover::after{
-//   transform: scale(1, 1);
-// }
-
-// .button--reversal a:hover{
-//   color: $white;
-// }
-
-// .button--reversal a:hover span::before{
-//   border-top: rem(1) solid $white;
-// }
-
-// .button--reversal a:hover span::after{
-//   background: $white;
-// }
-
-// //ボタンクリック時(押したことが分かりやすいように)
-// .button a:active{
-//   transform: translate(rem(4), rem(4));
-// }
-
-// .button a:active div{
-//   opacity: 0;
-// }
