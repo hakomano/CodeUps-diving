@@ -26,12 +26,12 @@ $bold: 700;
 
 // レタースペーシング(文字間)
 @mixin letter-spacing($l-spa) {
-  letter-spacing: ($l-spa / 1000) * 1em;
+  letter-spacing: calc(($l-spa / 1000) * 1em);
 }
 
 // ラインハイト(行間)
 @mixin line-height($lineFeed:24,$fontsize:16) {
-  line-height: ($lineFeed / $fontsize);
+  line-height: calc($lineFeed / $fontsize);
 }
 
 

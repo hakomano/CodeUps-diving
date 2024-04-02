@@ -56,9 +56,17 @@
   aspect-ratio: 187.5 / 667;
   width: 100%;
   height: 100%;
-  // object-fit: cover; //coverにすると左右の画像が合わなくなる(Tab)
+  object-fit: cover;
 
   @include mq(md){
     aspect-ratio: 720 / 768;
   }
+}
+
+.loader__left-img img{
+  object-position: top right;
+}
+
+.loader__right-img img{
+  object-position: top left;
 }

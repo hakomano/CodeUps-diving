@@ -1,10 +1,18 @@
 @use "global" as *;
 
 /* ----- キャンペーンカード ----- */
+.campaign-card{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
 .campaign-card a{
   display: block;
   height: 100%;
   box-shadow: $card-shadow;
+  display: flex;
+  flex-direction: column;
 }
 
 .campaign-card__img img{
@@ -19,10 +27,10 @@
 }
 
 .campaign-card__content{
+  padding: rem(16) rem(16) rem(24);
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
-  padding: rem(16) rem(16) rem(24);
+  height: 100%;
 
   @include mq(md){
     padding: rem(24) rem(16) rem(40);
@@ -36,7 +44,13 @@
   border-bottom: rem(1) solid $accent-green;
   padding-bottom: rem(8);
   margin-top: rem(6);
-  flex-grow: 1;
+  // flex-grow: 1; //価格下揃え用
+
+  //1行を超えると三点リーダーで省略する
+  // overflow: hidden;
+  // display: -webkit-box;
+  // -webkit-box-orient: vertical;
+  // -webkit-line-clamp: 1;
 
   @include mq(md){
     margin-top: rem(4);
@@ -46,6 +60,7 @@
 
 .campaign-card__bottom{
   padding-top: rem(7.5);
+  // margin-top: auto; //価格下揃え用
 
   @include mq(md){
     padding-top: rem(16);
@@ -53,6 +68,7 @@
 }
 
 .campaign-card__text{
+  display: block;
   text-align: center;
   font-size: rem(14);
   @include line-height(24,14);
