@@ -39,7 +39,7 @@
 
 .section-heading--white:first-letter{
   @include mq(md){
-    color: $sub-green;
+    color: $white;
   }
 }
 

@@ -42,8 +42,8 @@
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="./assets/js/jquery.inview.min.js"></script>
     <script defer src="./assets/js/script.js"></script>
   </head>
@@ -51,7 +51,7 @@
     <!-- ローディングアニメーション -->
     <div class="loader js-loader">
       <div class="loader__title site-title site-title--green js-loader-title">
-        <h2 class="loader__main-title site-title__main">diving</h2>
+        <div class="loader__main-title site-title__main">diving</div>
         <p class="loader__sub-title site-title__sub">
           into the ocean
         </p><!-- /.fv__sub-title -->
@@ -60,13 +60,13 @@
         <div class="loader__left-img js-loader-left">
           <picture>
             <source srcset="./assets/images/common/loader-left-pc@2x.jpg" media="(min-width: 768px)" width="720" height="768">
-            <img src="./assets/images/common/loader-left-sp@2x.jpg" alt="ローディング画面用の泳いでいるウミガメ" width="187" height="667">
+            <img src="./assets/images/common/loader-left-sp@2x.jpg" alt="ローディング画面用の泳いでいるウミガメ" width="187" height="667" decoding="async">
           </picture>
         </div><!-- /.loader__left-img -->
         <div class="loader__right-img js-loader-right">
           <picture>
             <source srcset="./assets/images/common/loader-right-pc@2x.jpg" media="(min-width: 768px)" width="720" height="768">
-            <img src="./assets/images/common/loader-right-sp@2x.jpg" alt="ローディング画面用の泳いでいるウミガメ" width="187" height="667">
+            <img src="./assets/images/common/loader-right-sp@2x.jpg" alt="ローディング画面用の泳いでいるウミガメ" width="187" height="667" decoding="async">
           </picture>
         </div><!-- /.loader__right-img -->
       </div><!-- /.loader__images -->
@@ -78,7 +78,7 @@
         <!-- サイトロゴ -->
         <h1 class="header__logo logo">
           <a href="./index.html">
-            <img src="./assets/images/common/logo.svg" alt="codeups">
+            <img src="./assets/images/common/logo.svg" alt="codeups" width="133" height="50">
           </a>
         </h1><!--/.header__logo -->
 
@@ -208,25 +208,25 @@
               <div class="fv__swiper-img swiper-slide">
                 <picture>
                   <source srcset="./assets/images/fv/fv1-pc@2x.jpg" media="(min-width: 768px)" width="1440" height="768">
-                  <img src="./assets/images/fv/fv1-sp@2x.jpg" alt="ファーストビュー画像1" width="375" height="667">
+                  <img src="./assets/images/fv/fv1-sp@2x.jpg" alt="ファーストビュー画像1" width="375" height="667" decoding="async">
                 </picture>
               </div><!-- /.fv__swiper-img -->
               <div class="fv__swiper-img swiper-slide">
                 <picture>
                   <source srcset="./assets/images/fv/fv2-pc@2x.jpg" media="(min-width: 768px)" width="1440" height="768">
-                  <img src="./assets/images/fv/fv2-sp@2x.jpg" alt="ファーストビュー画像2" width="375" height="667">
+                  <img src="./assets/images/fv/fv2-sp@2x.jpg" alt="ファーストビュー画像2" width="375" height="667" decoding="async">
                 </picture>
               </div><!-- /.fv__swiper-img -->
               <div class="fv__swiper-img swiper-slide">
                 <picture>
                   <source srcset="./assets/images/fv/fv3-pc@2x.jpg" media="(min-width: 768px)" width="1440" height="768">
-                  <img src="./assets/images/fv/fv3-sp@2x.jpg" alt="ファーストビュー画像3" width="375" height="667">
+                  <img src="./assets/images/fv/fv3-sp@2x.jpg" alt="ファーストビュー画像3" width="375" height="667" decoding="async">
                 </picture>
               </div><!-- /.fv__swiper-img -->
               <div class="fv__swiper-img swiper-slide">
                 <picture>
                   <source srcset="./assets/images/fv/fv4-pc@2x.jpg" media="(min-width: 768px)" width="1440" height="768">
-                  <img src="./assets/images/fv/fv4-sp@2x.jpg" alt="ファーストビュー画像4" width="375" height="667">
+                  <img src="./assets/images/fv/fv4-sp@2x.jpg" alt="ファーストビュー画像4" width="375" height="667" decoding="async">
                 </picture>
               </div><!-- /.fv__swiper-img -->
             </div><!-- /.fv__slider-wrap swiper-wrapper -->
@@ -237,9 +237,9 @@
       <!-- セクション：キャンペーン(Campaign) -->
       <section class="campaign top-campaign">
         <div class="top-campaign__inner inner">
-          <h3 class="top-campaign__heading section-heading">
+          <h2 class="top-campaign__heading section-heading">
             campaign<span>キャンペーン</span>
-          </h3>
+          </h2>
           <div class="top-campaign__slider">
             <div class="top-campaign__swiper-btn">
               <div class="top-campaign__btn-prev js-campaign-arrow"></div>
@@ -250,15 +250,15 @@
                 <li class="campaign-list__item campaign-card swiper-slide"><!-- swiper-slide：必須class名のため変更不可 -->
                   <a href="#">
                     <figure class="campaign-card__img">
-                      <img src="./assets/images/campaign/campaign1@2x.jpg" alt="キャンペーン画像1" width="520" height="347" loading="lazy">
+                      <img src="./assets/images/campaign/campaign1@2x.jpg" alt="キャンペーン画像1" width="520" height="347" loading="lazy" decoding="async">
                     </figure>
                     <div class="campaign-card__content">
                       <p class="campaign-card__category category-label">
                         ライセンス講習
                       </p><!-- /.campaign-card__category -->
-                      <h4 class="campaign-card__title">
+                      <h3 class="campaign-card__title">
                         ライセンス取得
-                      </h4><!-- /.campaign-card__title -->
+                      </h3><!-- /.campaign-card__title -->
                       <div class="campaign-card__bottom">
                         <p class="campaign-card__text">
                           全部コミコミ(お一人様)
@@ -271,22 +271,22 @@
                             &yen;46,000
                           </p><!-- /.campaign-card__cut-price -->
                         </div><!-- /.campaign-card__price -->
-                      </div><!-- /.campain-card__bottom -->
+                      </div><!-- /.campaign-card__bottom -->
                     </div><!-- /.campaign-card__content -->
                   </a>
                 </li><!-- /.campaign-card .swiper-slide -->
                 <li class="campaign-list__item campaign-card swiper-slide"><!-- swiper-slide：必須class名のため変更不可 -->
                   <a href="#">
                     <figure class="campaign-card__img">
-                      <img src="./assets/images/campaign/campaign2@2x.jpg" alt="キャンペーン画像2" width="520" height="347" loading="lazy">
+                      <img src="./assets/images/campaign/campaign2@2x.jpg" alt="キャンペーン画像2" width="520" height="347" loading="lazy" decoding="async">
                     </figure>
                     <div class="campaign-card__content">
                       <p class="campaign-card__category category-label">
                         体験ダイビング
                       </p><!-- /.campaign-card__category -->
-                      <h4 class="campaign-card__title">
+                      <h3 class="campaign-card__title">
                         貸切体験ダイビング
-                      </h4><!-- /.campaign-card__title -->
+                      </h3><!-- /.campaign-card__title -->
                       <div class="campaign-card__bottom">
                         <p class="campaign-card__text">
                           全部コミコミ(お一人様)
@@ -306,15 +306,15 @@
                 <li class="campaign-list__item campaign-card swiper-slide"><!-- swiper-slide：必須class名のため変更不可 -->
                   <a href="#">
                     <figure class="campaign-card__img">
-                      <img src="./assets/images/campaign/campaign3@2x.jpg" alt="キャンペーン画像3" width="520" height="347" loading="lazy">
+                      <img src="./assets/images/campaign/campaign3@2x.jpg" alt="キャンペーン画像3" width="520" height="347" loading="lazy" decoding="async">
                     </figure>
                     <div class="campaign-card__content">
                       <p class="campaign-card__category category-label">
                         体験ダイビング
                       </p><!-- /.campaign-card__category -->
-                      <h4 class="campaign-card__title">
+                      <h3 class="campaign-card__title">
                         ナイトダイビング
-                      </h4><!-- /.campaign-card__title -->
+                      </h3><!-- /.campaign-card__title -->
                       <div class="campaign-card__bottom">
                         <p class="campaign-card__text">
                           全部コミコミ(お一人様)
@@ -334,15 +334,15 @@
                 <li class="campaign-list__item campaign-card swiper-slide"><!-- swiper-slide：必須class名のため変更不可 -->
                   <a href="#">
                     <figure class="campaign-card__img">
-                      <img src="./assets/images/campaign/campaign4@2x.jpg" alt="キャンペーン画像4" width="520" height="347" loading="lazy">
+                      <img src="./assets/images/campaign/campaign4@2x.jpg" alt="キャンペーン画像4" width="520" height="347" loading="lazy" decoding="async">
                     </figure>
                     <div class="campaign-card__content">
                       <p class="campaign-card__category category-label">
                         ファンダイビング
                       </p><!-- /.campaign-card__category -->
-                      <h4 class="campaign-card__title">
+                      <h3 class="campaign-card__title">
                         貸切ファンダイビング
-                      </h4><!-- /.campaign-card__title -->
+                      </h3><!-- /.campaign-card__title -->
                       <div class="campaign-card__bottom">
                         <p class="campaign-card__text">
                           全部コミコミ(お一人様)
@@ -362,15 +362,15 @@
                 <li class="campaign-list__item campaign-card swiper-slide"><!-- swiper-slide：必須class名のため変更不可 -->
                   <a href="#">
                     <figure class="campaign-card__img">
-                      <img src="./assets/images/campaign/campaign1@2x.jpg" alt="キャンペーン画像1" width="520" height="347" loading="lazy">
+                      <img src="./assets/images/campaign/campaign1@2x.jpg" alt="キャンペーン画像1" width="520" height="347" loading="lazy" decoding="async">
                     </figure>
                     <div class="campaign-card__content">
                       <p class="campaign-card__category category-label">
                         ライセンス講習
                       </p><!-- /.campaign-card__category -->
-                      <h4 class="campaign-card__title">
+                      <h3 class="campaign-card__title">
                         ライセンス取得
-                      </h4><!-- /.campaign-card__title -->
+                      </h3><!-- /.campaign-card__title -->
                       <div class="campaign-card__bottom">
                         <p class="campaign-card__text">
                           全部コミコミ(お一人様)
@@ -383,22 +383,22 @@
                             &yen;46,000
                           </p><!-- /.campaign-card__cut-price -->
                         </div><!-- /.campaign-card__price -->
-                      </div><!-- /.campain-card__bottom -->
+                      </div><!-- /.campaign-card__bottom -->
                     </div><!-- /.campaign-card__content -->
                   </a>
                 </li><!-- /.campaign-card .swiper-slide -->
                 <li class="campaign-list__item campaign-card swiper-slide"><!-- swiper-slide：必須class名のため変更不可 -->
                   <a href="#">
                     <figure class="campaign-card__img">
-                      <img src="./assets/images/campaign/campaign2@2x.jpg" alt="キャンペーン画像2" width="520" height="347" loading="lazy">
+                      <img src="./assets/images/campaign/campaign2@2x.jpg" alt="キャンペーン画像2" width="520" height="347" loading="lazy" decoding="async">
                     </figure>
                     <div class="campaign-card__content">
                       <p class="campaign-card__category category-label">
                         体験ダイビング
                       </p><!-- /.campaign-card__category -->
-                      <h4 class="campaign-card__title">
+                      <h3 class="campaign-card__title">
                         貸切体験ダイビング
-                      </h4><!-- /.campaign-card__title -->
+                      </h3><!-- /.campaign-card__title -->
                       <div class="campaign-card__bottom">
                         <p class="campaign-card__text">
                           全部コミコミ(お一人様)
@@ -418,15 +418,15 @@
                 <li class="campaign-list__item campaign-card swiper-slide"><!-- swiper-slide：必須class名のため変更不可 -->
                   <a href="#">
                     <figure class="campaign-card__img">
-                      <img src="./assets/images/campaign/campaign3@2x.jpg" alt="キャンペーン画像3" width="520" height="347" loading="lazy">
+                      <img src="./assets/images/campaign/campaign3@2x.jpg" alt="キャンペーン画像3" width="520" height="347" loading="lazy" decoding="async">
                     </figure>
                     <div class="campaign-card__content">
                       <p class="campaign-card__category category-label">
                         体験ダイビング
                       </p><!-- /.campaign-card__category -->
-                      <h4 class="campaign-card__title">
+                      <h3 class="campaign-card__title">
                         ナイトダイビング
-                      </h4><!-- /.campaign-card__title -->
+                      </h3><!-- /.campaign-card__title -->
                       <div class="campaign-card__bottom">
                         <p class="campaign-card__text">
                           全部コミコミ(お一人様)
@@ -446,15 +446,15 @@
                 <li class="campaign-list__item campaign-card swiper-slide"><!-- swiper-slide：必須class名のため変更不可 -->
                   <a href="#">
                     <figure class="campaign-card__img">
-                      <img src="./assets/images/campaign/campaign4@2x.jpg" alt="キャンペーン画像4" width="520" height="347" loading="lazy">
+                      <img src="./assets/images/campaign/campaign4@2x.jpg" alt="キャンペーン画像4" width="520" height="347" loading="lazy" decoding="async">
                     </figure>
                     <div class="campaign-card__content">
                       <p class="campaign-card__category category-label">
                         ファンダイビング
                       </p><!-- /.campaign-card__category -->
-                      <h4 class="campaign-card__title">
+                      <h3 class="campaign-card__title">
                         貸切ファンダイビング
-                      </h4><!-- /.campaign-card__title -->
+                      </h3><!-- /.campaign-card__title -->
                       <div class="campaign-card__bottom">
                         <p class="campaign-card__text">
                           全部コミコミ(お一人様)
@@ -474,8 +474,8 @@
               </ul><!-- /.top-campaign__slider-list .swiper-wrapper -->
             </div><!-- /.top-campaign__slider-swiper -->
           </div><!-- /.top-campaign__slider-wrap -->
-          <div class="top-campaign__btn button">
-            <a href="#"><div></div><span>view more</span></a>
+          <div class="top-campaign__btn">
+            <a href="#" class="button"><div></div><span>view more</span></a>
           </div><!-- /.button -->
         </div><!-- /.top-campaign__inner -->
       </section><!-- /.campaign -->
@@ -484,33 +484,33 @@
       <section class="about top-about">
         <div class="top-about__bg">
           <div class="top-about__inner inner">
-            <h3 class="top-about__heading section-heading">
+            <h2 class="top-about__heading section-heading">
               about us<span>私たちについて</span>
-            </h3>
+            </h2>
             <div class="top-about__content">
               <div class="top-about__images">
                 <div class="top-about__img top-about__img--left">
                   <picture>
                     <source media="(min-width:768px)" srcset="./assets/images/about/about-left-pc@2x.jpg" width="606" height="400">
-                    <img src="./assets/images/about/about-left-sp@2x.jpg" alt="青空の下に見える瓦屋根の上のシーサー" width="128" height="194" loading="lazy">
+                    <img src="./assets/images/about/about-left-sp@2x.jpg" alt="青空の下に見える瓦屋根の上のシーサー" width="128" height="194" loading="lazy" decoding="async">
                   </picture>
                 </div><!-- /.top-about__img -->
                 <div class="top-about__img top-about__img--right">
                   <picture>
                     <source media="(min-width:768px)" srcset="./assets/images/about/about-right-pc@2x.jpg" width="880" height="581">
-                    <img src="./assets/images/about/about-right-sp@2x.jpg" alt="海底付近を泳いでいる2匹の黄色い魚" width="281" height="186" loading="lazy">
+                    <img src="./assets/images/about/about-right-sp@2x.jpg" alt="海底付近を泳いでいる2匹の黄色い魚" width="281" height="186" loading="lazy" decoding="async">
                   </picture>
                 </div><!-- /.top-about__img -->
               </div><!-- /.top-about__images -->
               <div class="top-about__text-content">
-                <h4 class="top-about__title">Dive into<br>the Ocean</h4><!-- /.top-about__title -->
+                <h3 class="top-about__title">Dive into<br>the Ocean</h3><!-- /.top-about__title -->
                 <div class="top-about__textarea">
                   <p class="top-about__text">
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                     ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト<!-- が入ります。-->
                   </p>
-                  <div class="top-about__btn button">
-                    <a href="#"><div></div><span>view more</span></a>
+                  <div class="top-about__btn">
+                    <a href="#" class="button"><div></div><span>view more</span></a>
                   </div><!-- /.button -->
                 </div><!-- /.top-about__textarea -->
               </div><!-- /.top-about__text-content -->
@@ -522,24 +522,24 @@
       <!-- セクション：ダイビング情報(Information) -->
       <section class="information top-info">
         <div class="top-info__inner inner">
-          <h3 class="top-info__heading section-heading">
+          <h2 class="top-info__heading section-heading">
             information<span>ダイビング情報</span>
-          </h3>
+          </h2>
           <div class="top-info__container">
             <div class="top-info__img colorbox">
               <picture>
                 <source media="(min-width:768px)" srcset="./assets/images/top/info-top-pc@2x.jpg" width="540" height="356">
-                <img src="./assets/images/top/info-top-sp@2x.jpg" alt="サンゴ礁の中を泳ぐ複数の魚たち" width="345" height="227" loading="lazy">
+                <img src="./assets/images/top/info-top-sp@2x.jpg" alt="サンゴ礁の中を泳ぐ複数の魚たち" width="345" height="227" loading="lazy" decoding="async">
               </picture>
             </div><!-- /.top-info__img -->
             <div class="top-info__text-content">
-              <h4 class="top-info__title">ライセンス講習</h4>
+              <h3 class="top-info__title">ライセンス講習</h3>
               <p class="top-info__text">
                 当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>
                 正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
               </p>
-              <div class="top-info__btn button">
-                <a href="#"><div></div><span>view more</span></a>
+              <div class="top-info__btn">
+                <a href="#" class="button"><div></div><span>view more</span></a>
               </div><!-- /.button -->
             </div><!-- /.top-info__text-content -->
           </div><!-- /.top-info__container -->
@@ -549,19 +549,19 @@
       <!-- セクション：ブログ(Blog) -->
       <section class="blog top-blog" id="top-blog">
         <div class="top-blog__bg">
-          <div class="top-blog__inner">
-            <h3 class="top-blog__heading section-heading section-heading--white">
+          <div class="top-blog__inner inner">
+            <h2 class="top-blog__heading section-heading section-heading--white">
               blog<span>ブログ</span>
-            </h3>
+            </h2>
             <ul class="top-blog__list blog-list">
               <li class="blog-list__item blog-card">
                 <a href="#">
                   <figure class="blog-card__img">
-                    <img src="./assets/images/blog/blog1@2x.jpg" alt="海中のピンク色のサンゴ" width="301" height="201" loading="lazy">
+                    <img src="./assets/images/blog/blog1@2x.jpg" alt="海中のピンク色のサンゴ" width="301" height="201" loading="lazy" decoding="async">
                   </figure>
                   <div class="blog-card__content">
                     <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                    <h4 class="blog-card__title">ライセンス取得</h4>
+                    <h3 class="blog-card__title">ライセンス取得</h3>
                     <p class="blog-card__text">
                       ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                       ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
@@ -572,11 +572,11 @@
               <li class="blog-list__item blog-card">
                 <a href="#">
                   <figure class="blog-card__img">
-                    <img src="./assets/images/blog/blog2@2x.jpg" alt="海の中を泳ぐウミガメ" width="301" height="201" loading="lazy">
+                    <img src="./assets/images/blog/blog2@2x.jpg" alt="海の中を泳ぐウミガメ" width="301" height="201" loading="lazy" decoding="async">
                   </figure>
                   <div class="blog-card__content">
                     <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                    <h4 class="blog-card__title">ウミガメと泳ぐ</h4>
+                    <h3 class="blog-card__title">ウミガメと泳ぐ</h3>
                     <p class="blog-card__text">
                       ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                       ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
@@ -587,11 +587,11 @@
               <li class="blog-list__item blog-card">
                 <a href="#">
                   <figure class="blog-card__img">
-                    <img src="./assets/images/blog/blog3@2x.jpg" alt="イソギンチャクの隙間から除くカクレクマノミ" width="301" height="201" loading="lazy">
+                    <img src="./assets/images/blog/blog3@2x.jpg" alt="イソギンチャクの隙間から除くカクレクマノミ" width="301" height="201" loading="lazy" decoding="async">
                   </figure>
                   <div class="blog-card__content">
                     <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                    <h4 class="blog-card__title">カクレクマノミ</h4>
+                    <h3 class="blog-card__title">カクレクマノミ</h3>
                     <p class="blog-card__text">
                       ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                       ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
@@ -600,8 +600,8 @@
                 </a>
               </li><!-- /.blog-list__item -->
             </ul><!-- /.blog__list -->
-            <div class="top-blog__btn button">
-              <a href="#"><div></div><span>view more</span></a>
+            <div class="top-blog__btn">
+              <a href="#" class="button"><div></div><span>view more</span></a>
             </div><!-- /.button -->
           </div><!-- /.top-blog__inner -->
         </div><!-- /.top-blog__bg-wrap -->
@@ -611,9 +611,9 @@
       <section class="voice top-voice" id="top-voice">
         <div class="top-voice__bg">
           <div class="top-voice__inner inner">
-            <h3 class="top-voice__heading section-heading">
+            <h2 class="top-voice__heading section-heading">
               voice<span>お客様の声</span>
-            </h3>
+            </h2>
             <ul class="top-voice__list voice-list">
               <li class="voice-list__item voice-card">
                 <a href="#">
@@ -627,12 +627,12 @@
                           ライセンス講習
                         </p><!-- /.voice-card__category -->
                       </div><!-- /.voice-card__user -->
-                      <h4 class="voice-card__title">
+                      <h3 class="voice-card__title">
                         ここにタイトルが入ります。ここにタイトル
-                      </h4><!-- /.voice-card__title -->
+                      </h3><!-- /.voice-card__title -->
                     </div><!-- /.voice-card__infoBox -->
                     <figure class="voice-card__img colorbox">
-                      <img src="./assets/images/voice/voice1@2x.jpg" alt="帽子を被った20代女性" width="180" height="140" loading="lazy">
+                      <img src="./assets/images/voice/voice1@2x.jpg" alt="帽子を被った20代女性" width="180" height="140" loading="lazy" decoding="async">
                     </figure>
                   </div><!-- /.voice-card__info -->
                   <div class="voice-card__text">
@@ -654,12 +654,12 @@
                           ファンダイビング
                         </p><!-- /.voice-card__category -->
                       </div><!-- /.voice-card__user -->
-                      <h4 class="voice-card__title">
+                      <h3 class="voice-card__title">
                         ここにタイトルが入ります。ここにタイトル
-                      </h4><!-- /.voice-card__title -->
+                      </h3><!-- /.voice-card__title -->
                     </div><!-- /.voice-card__infoBox -->
                     <figure class="voice-card__img colorbox">
-                      <img src="./assets/images/voice/voice2@2x.jpg" alt="右手でグッドサインを出す30代男性" width="180" height="140" loading="lazy">
+                      <img src="./assets/images/voice/voice2@2x.jpg" alt="右手でグッドサインを出す30代男性" width="180" height="140" loading="lazy" decoding="async">
                     </figure>
                   </div><!-- /.voice-card__info -->
                   <div class="voice-card__text">
@@ -670,8 +670,8 @@
                 </a>
               </li><!-- /.voice-list__item -->
             </ul><!-- /.top-voice__list voice-list -->
-            <div class="top-voice__btn button">
-              <a href="#"><div></div><span>view more</span></a>
+            <div class="top-voice__btn">
+              <a href="#" class="button"><div></div><span>view more</span></a>
             </div><!-- /.button -->
           </div><!-- /.top-voice__inner -->
         </div><!-- /.top-voice__bg-wrap -->
@@ -681,19 +681,19 @@
       <section class="price top-price">
         <div class="top-price__bg">
           <div class="top-price__inner inner">
-            <h3 class="top-price__heading section-heading">
+            <h2 class="top-price__heading section-heading">
               price<span>料金一覧</span>
-            </h3>
+            </h2>
             <div class="top-price__content">
               <div class="top-price__img colorbox">
                 <picture>
                   <source media="(min-width:768px)" srcset="./assets/images/top/price-top-pc@2x.jpg" width="746" height="492">
-                  <img src="./assets/images/top/price-top-sp@2x.jpg" alt="海中を泳ぐウミガメ" width="345" height="227" loading="lazy">
+                  <img src="./assets/images/top/price-top-sp@2x.jpg" alt="海中を泳ぐウミガメ" width="345" height="227" loading="lazy" decoding="async">
                 </picture>
               </div><!-- /.top-price__img -->
               <div class="top-price__list price-list">
                 <div class="price-list__block">
-                  <h4 class="price-list__title">ライセンス講習</h4>
+                  <h3 class="price-list__title">ライセンス講習</h3>
                   <dl class="price-list__item">
                     <dt>オープンウォーターダイバーコース</dt>
                     <dd>&yen;50,000</dd>
@@ -704,7 +704,7 @@
                   </dl>
                 </div><!-- /.price-list__block -->
                 <div class="price-list__block">
-                  <h4 class="price-list__title">体験ダイビング</h4>
+                  <h3 class="price-list__title">体験ダイビング</h3>
                   <dl class="price-list__item">
                     <dt>ビーチ体験ダイビング(半日)</dt>
                     <dd>&yen;7,000</dd>
@@ -717,7 +717,7 @@
                   </dl>
                 </div><!-- /.price-list__block -->
                 <div class="price-list__block">
-                  <h4 class="price-list__title">ファンダイビング</h4>
+                  <h3 class="price-list__title">ファンダイビング</h3>
                   <dl class="price-list__item">
                     <dt>ビーチダイビング(2ダイブ)</dt>
                     <dd>&yen;14,000</dd>
@@ -730,7 +730,7 @@
                   </dl>
                 </div><!-- /.price-list__block -->
                 <div class="price-list__block">
-                  <h4 class="price-list__title">スペシャルダイビング</h4>
+                  <h3 class="price-list__title">スペシャルダイビング</h3>
                   <dl class="price-list__item">
                     <dt>貸切ダイビング(2ダイブ)</dt>
                     <dd>&yen;24,000</dd>
@@ -740,8 +740,8 @@
                 </div><!-- /.price-list__block -->
               </div><!-- /.top-price__list -->
             </div><!-- /.top-price__content -->
-            <div class="top-price__btn button">
-              <a href="#"><div></div><span>view more</span></a>
+            <div class="top-price__btn">
+              <a href="#" class="button"><div></div><span>view more</span></a>
             </div><!-- /.button -->
           </div><!-- /.top-price__inner -->
         </div><!-- /.top-price__bg -->
@@ -754,7 +754,7 @@
             <div class="cta__container">
               <div class="cta__info">
                 <div class="cta__logo logo">
-                  <img src="./assets/images/common/logo-green.svg" alt="code ups">
+                  <img src="./assets/images/common/logo-green.svg" alt="code ups" width="200" height="75">
                 </div><!--/.cta__logo -->
                 <hr>
                 <div class="cta__info-flex">
@@ -770,14 +770,14 @@
                 </div><!-- /.cta__info-flex -->
               </div><!-- /.cta__info -->
               <div class="cta__link">
-                <h3 class="cta__heading section-heading section-heading--big">
+                <h2 class="cta__heading section-heading section-heading--big">
                   contact<span>お問い合わせ</span>
-                </h3>
+                </h2>
                 <p class="cta__text">
                   ご予約・お問い合わせはコチラ
                 </p><!-- /.cta__text -->
-                <div class="cta__btn button">
-                  <a href="#"><div></div><span>contact us</span></a>
+                <div class="cta__btn">
+                  <a href="#" class="button"><div></div><span>contact us</span></a>
                 </div><!-- /.cta__btn -->
               </div><!-- /.cta__link -->
             </div><!-- /.cta__container -->
@@ -792,15 +792,15 @@
         <div class="footer__head">
           <div class="footer__logo logo">
             <a href="./index.html">
-              <img src="./assets/images/common/logo.svg" alt="codeups">
+              <img src="./assets/images/common/logo.svg" alt="codeups" width="200" height="75">
             </a>
           </div><!--/.footer__logo -->
           <div class="footer__sns">
             <a href="#">
-              <img src="./assets/images/common/facebook-logo.svg" alt="フェイスブックのアイコン">
+              <img src="./assets/images/common/facebook-logo.svg" alt="フェイスブックのアイコン" width="32" height="32">
             </a>
             <a href="#">
-              <img src="./assets/images/common/instagram-logo.svg" alt="インスタグラムのアイコン">
+              <img src="./assets/images/common/instagram-logo.svg" alt="インスタグラムのアイコン" width="32" height="32">
             </a>
           </div><!-- /.footer__sns -->
         </div><!-- /.footer__head -->

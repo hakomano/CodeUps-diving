@@ -1,6 +1,6 @@
 @use "global" as *;
 /* ----- 共通ボタン ----- */
-.button a{
+.button{
   width: rem(202); //全ボタンサイズ同じ：BEM設計としてはブロックに特定のwidthは入れない?
   max-width: 100%;
   display: inline-block; //blockではなくinline-blockの方が親要素で中央揃えなどの指定ができる
@@ -19,7 +19,7 @@
   // overflow: hidden;
 }
 
-.button a > div{
+.button > div{
   width: rem(202);
   height: rem(54);
   border: rem(1) solid $accent-green;
@@ -62,7 +62,7 @@
 }
 
 //ホバースライド後
-.button a::after{
+.button::after{
   background: $white;
   position: absolute;
   top: 0;
@@ -77,14 +77,14 @@
 }
 
 //色反転ボタン(404ページ用)
-.button--reversal a{
+.button--reversal{
   border: rem(1) solid $white;
   background: $white;
   color: $accent-green;
   text-transform: capitalize;
 }
 
-.button--reversal a > div{
+.button--reversal > div{
   border: rem(1) solid $white;
 }
 
@@ -96,51 +96,51 @@
   background: $accent-green;
 }
 
-.button--reversal a::after{
+.button--reversal::after{
   background: $accent-green;
 }
 
 //ボタンホバー・アクティブ処理(hover使用可否で切替)
 @media (hover: hover) {
   // hoverが使える端末 PC想定
-  .button a:hover {
+  .button:hover {
     color: $accent-green;
     opacity: 1;
   }
-  .button a:hover span::before{
+  .button:hover span::before{
     border-top: rem(1) solid $accent-green;
   }
-  .button a:hover span::after{
+  .button:hover span::after{
     background: $accent-green;
   }
-  .button a:hover::after{
+  .button:hover::after{
     transform: scale(1, 1);
   }
   // 色反転ボタン時
-  .button--reversal a:hover{
+  .button--reversal:hover{
     color: $white;
   }
-  .button--reversal a:hover span::before{
+  .button--reversal:hover span::before{
     border-top: rem(1) solid $white;
   }
-  .button--reversal a:hover span::after{
+  .button--reversal:hover span::after{
     background: $white;
   }
   // ボタンクリック時(押したことが分かりやすいように)
-  .button a:active{
+  .button:active{
     transform: translate(rem(4), rem(4));
   }
-  .button a:active div{
+  .button:active div{
     opacity: 0;
   }
 }
 @media (hover: none) {
   // hoverが使えない端末 スマホ・タブレット想定
-  .button a:active {
+  .button:active {
     opacity: 1;
     transform: translate(rem(4), rem(4));
   }
-  .button a:active div{
+  .button:active div{
     opacity: 0;
   }
 }

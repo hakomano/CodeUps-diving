@@ -87,23 +87,25 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   function openDrawer() {
     $(".js-drawer").fadeIn();
     $(".js-hamburger").addClass("is-open");
+    $("body").css({ height: "100%", overflow: "hidden" }); //背景はスクロールさせない
   }
 
   function closeDrawer() {
     $(".js-drawer").fadeOut();
     $(".js-hamburger").removeClass("is-open");
+    $("body").css({ height: "", overflow: "" });
   }
 
   //========================================================*
-  // フッター表示されたら追従ヘッダーを非表示
+  // フッター表示されたら追従ヘッダーを非表示 ⇒CSSのFBにてNG
   //========================================================*
-  $(".footer").on('inview', function(event, isInViewHeader){
-    if (isInViewHeader) {
-      $(".js-header").fadeOut();
-    } else {
-      $(".js-header").fadeIn();
-    }
-  });
+  // $(".footer").on('inview', function(event, isInViewHeader){
+  //   if (isInViewHeader) {
+  //     $(".js-header").fadeOut();
+  //   } else {
+  //     $(".js-header").fadeIn();
+  //   }
+  // });
 
   //========================================================*
   // ページトップボタン処理(フッター手前で止まる)
@@ -181,14 +183,15 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   const fvSwiper = new Swiper(".js-fv-swiper", {
     loop: true,//無限ループさせる
     speed: 2000,//スライド切替アニメーションのスピードを指定(ミリ秒)
-    // effect: "fade", //フェード切替の場合はこれ
-    // fadeEffect: {
-    //     crossFade: true,
-    // },
+    effect: "fade", //フェード切替
+    fadeEffect: {
+        crossFade: true,
+    },
     autoplay: {
         delay: 3000,//次のスライドに切り替わるまでの時間を指定（ミリ秒）
         disableOnInteraction: false,//ユーザーが操作時に自動再生止めない
     },
+    allowTouchMove:false,//ドラッグ（スワイプ）でのスライド切替を無効
   });
 
   //========================================================*

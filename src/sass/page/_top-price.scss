@@ -79,7 +79,6 @@
 .top-price__btn{
   margin-top: rem(40);
   text-align: center;
-  margin-right: rem(4); //ボタンをデザインカンプ通り(完全な中央揃えではない配置)にするなら使用
 
   @include mq(md){
     margin-top: rem(79);
