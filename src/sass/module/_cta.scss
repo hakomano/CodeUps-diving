@@ -1,34 +1,42 @@
 @use "global" as *;
 
 /* ----- 共通CTAセクション ----- */
-.cta__bg {
-  width: 100%;
-  padding: rem(54) rem(15) rem(105);
-  margin-inline: auto;
-  background: url(../images/common/fishes-left.svg) no-repeat;
-  background-position: right top;
-  background-size: 31.5% auto;
-  background-origin: content-box; //背景を描画する起点をパディング領域の内側の左上角にする
+.cta{
+  margin-top: rem(80);
+  position: relative;
 
   @include mq(md){
-    max-width: rem(1340) + rem(30);  //イラストのインナー幅+左右余白(15✕2)
-    padding: rem(100) rem(15) rem(163);
-    background-position: right top;
-    background-size: 22.5% auto;
+    margin-top: rem(140);
+  }
+}
+
+.cta::before {
+  position: absolute;
+  content: "";
+  background: url(../images/common/fishes-left.svg) no-repeat;
+  background-size: contain;
+  max-width: rem(109);
+  aspect-ratio: 109 / 50;
+  width: 100%;
+  height: auto;
+  top: rem(-26);
+  right: calc(50% - min(48vw, rem(172.5)));
+  display: inline-block;
+
+  @include mq(md){
+    max-width: rem(301);
+    aspect-ratio: 301 / 138;
+    top: rem(-39);
+    right: calc(50% - min(48vw, rem(670)));
   }
 }
 
 .cta__inner {
   max-width: rem(600); //タブレット時の間延び防止用
   width: 100%;
-  margin-inline: auto;
-  padding-top: rem(27);
 
   @include mq(md){
-    max-width: $inner + strip-unit($padding-pc) * 2;
-    padding-right: $padding-pc;
-    padding-left: $padding-pc;
-    padding-top: rem(36);
+    max-width: 100%;
   }
 }
 
@@ -39,7 +47,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: rem(80) 0;
+    padding: rem(78) 0;
     box-shadow: $cta-shadow;
   }
 }
@@ -146,7 +154,7 @@
   @include line-height(18,14);
 
   @include mq(md){
-    margin-top: rem(13);
+    margin-top: rem(12);
   };
 }
 

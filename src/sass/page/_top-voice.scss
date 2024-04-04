@@ -1,32 +1,44 @@
 @use "global" as *;
 
 /* ----- トップページのVoiceセクション ----- */
-.top-voice__bg {
-  padding-top: rem(89);
-  padding-bottom: rem(84);
+.top-voice {
+  margin-top: rem(90);
 
   @include mq(md){
-    max-width: rem(1240) + rem(30);  //イラストのインナー幅+左右余白(15✕2)
+    margin-top: rem(142);
+    position: relative;
+  }
+}
+
+.top-voice::before{
+  @include mq(md){
+    position: absolute;
+    content: "";
+    background: url(../images/common/fishes-right.svg) no-repeat;
+    background-size: contain;
+    top: rem(-118);
+    max-width: rem(301);
+    aspect-ratio: 301 / 138;
     width: 100%;
-    padding: rem(25) rem(15) rem(73);
-    margin-inline: auto;
-    background: url(../images/common/fishes-right.svg), url(../images/common/seahorse.svg);
-    background-repeat: no-repeat, no-repeat;
-    background-position: left top, right 6.8% bottom;
-    background-size: 24.2% auto, 5.8% auto;
-    background-origin: content-box; //背景を描画する起点をパディング領域の内側の左上角にする
+    height: auto;
+    left: calc(50% - min(48vw, rem(620)));
+    display: inline-block;
   }
 }
 
-.top-voice__inner{
+.top-voice::after{
   @include mq(md){
-    padding-bottom: rem(72); //イラストの下まで
-  }
-}
-
-.top-voice__heading{
-  @include mq(md){
-    margin-top: rem(118);
+    position: absolute;
+    content: "";
+    background: url(../images/common/seahorse.svg) no-repeat;
+    background-size: contain;
+    bottom: rem(-72);
+    max-width: rem(71);
+    aspect-ratio: 71 / 162;
+    width: 100%;
+    height: auto;
+    right: calc(50% - min(48vw, rem(540)));
+    display: inline-block;
   }
 }
 

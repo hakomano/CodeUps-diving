@@ -59,11 +59,11 @@
 }
 
 .campaign-card__bottom{
-  padding-top: rem(7.5);
+  margin-top: rem(7.5);
   // margin-top: auto; //価格下揃え用
 
   @include mq(md){
-    padding-top: rem(16);
+    margin-top: rem(16);
   }
 }
 
@@ -80,17 +80,21 @@
 }
 
 .campaign-card__price{
+  margin-top: rem(8);
   display: flex;
-  padding-top: rem(8);
+  gap: rem(18);
   align-items: baseline;
   justify-content: center;
   font-weight: $bold;
   font-family: $second-en-font-family;
   line-height: 1;
+
+  @include mq(md){
+    gap: rem(24);
+  }
 }
 
 .campaign-card__original-price{
-  padding-right: rem(18);
   font-size: rem(20);
   text-decoration: line-through;
   text-decoration-style:solid;
@@ -98,7 +102,6 @@
   text-decoration-color: #C94800;
 
   @include mq(md){
-    padding-right: rem(24);
     font-size: rem(24);
   }
 }

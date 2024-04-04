@@ -3,12 +3,11 @@
 /* ----- トップページのcampaignセクション ----- */
 .top-campaign{
   overflow: hidden;
-  padding-top: rem(45);
-  padding-bottom: rem(10);
+  margin-top: rem(45);
+  padding-bottom: rem(8); //ボタン下が見切れてしまうため
 
   @include mq(md){
-    padding-top: rem(120);
-    padding-bottom: rem(24);
+    margin-top: rem(120);
   }
 }
 
@@ -132,13 +131,12 @@
 }
 
 .top-campaign__swiper{
+  margin-top: rem(32);
   margin-right: calc(50% - 50vw);
-  padding-top: rem(32);
-  padding-bottom: rem(39);
+  padding-bottom: rem(10);
 
   @include mq(md){
-    padding-top: rem(26);
-    padding-bottom: rem(80);
+    margin-top: rem(26);
   }
 }
 
@@ -148,4 +146,9 @@
 
 .top-campaign__btn {
   text-align: center;
+  margin-top: rem(29);
+
+  @include mq(md){
+    margin-top: rem(70);
+  }
 }
