@@ -32,12 +32,12 @@
     content: "";
     background: url(../images/common/seahorse.svg) no-repeat;
     background-size: contain;
-    bottom: rem(-72);
     max-width: rem(71);
     aspect-ratio: 71 / 162;
     width: 100%;
     height: auto;
     right: calc(50% - min(48vw, rem(540)));
+    bottom: rem(-72);
     display: inline-block;
   }
 }

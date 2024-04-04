@@ -43,14 +43,6 @@
   align-items: center;
 }
 
-.header__logo img{
-  padding-top: rem(5);
-
-  @include mq(md){
-    padding-top: rem(10);
-  }
-}
-
 /* ----- ハンバーガーボタン：三→✕ ----- */
 .header__hamburger {
   margin: 0;
@@ -128,16 +120,11 @@
   position: relative;
   max-width: rem(500);
   width: 100%;
-  height: calc(100vh - rem(80));
+  height: calc(100vh - rem(90));
   overflow-y: scroll;
   scrollbar-width: none;
 }
 
 .header__drawer-nav::-webkit-scrollbar {
   display: none;
-}
-
-.header__drawer-nav > ul{
-  margin-left: rem(-8);
-  padding-top: rem(10);
 }

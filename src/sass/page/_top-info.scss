@@ -67,7 +67,7 @@
   font-size: rem(20);
   font-weight: $bold;
   @include line-height(24,20);
-  border-bottom: 1px solid $accent-green;
+  border-bottom: rem(1) solid $accent-green;
   padding-bottom: rem(4);
 
   @include mq(md){

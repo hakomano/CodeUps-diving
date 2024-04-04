@@ -23,39 +23,8 @@
   }
 }
 
-// .nav-list__right{
-
-//   @include mq(md){
-//     display: flex;
-//     column-gap: rem(100);
-//   }
-// }
-
-.nav-list__box{
-
-}
-
-.nav-list__items {
-  // height: rem(510);
-  // display: flex;
-  // flex-flow: column wrap;
-  // column-gap: rem(1);
-  // row-gap: rem(13);
-  // margin-inline: auto;
-
-  @include mq(md){
-    // height: rem(250);
-    // column-gap: rem(37);
-  }
-}
-
 .nav-list__items + .nav-list__items{
   margin-top: rem(13);
-}
-
-.nav-list__item{
-  // position: relative;
-  // break-inside: avoid; //要素の途中で折り返しを防止
 }
 
 .nav-list__item a{
@@ -100,5 +69,5 @@
 }
 
 .nav-list__child {
-  padding-left: rem(22);
+  margin-left: rem(22);
 }

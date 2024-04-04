@@ -50,7 +50,7 @@
 
 //ホバーしたら下線が真ん中から広がるように表示
 .pc-nav__item a::after {
-  content: '';
+  content: "";
   /*絶対配置で線の位置を決める*/
   position: absolute;
   bottom: 20%;
