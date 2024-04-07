@@ -21,8 +21,8 @@
     content: "";
     background: url(../images/common/coral.svg) no-repeat;
     background-size: contain;
-    max-width: rem(194);
     aspect-ratio: 194 / 181;
+    max-width: rem(194);
     width: 100%;
     height: auto;
     right: calc(50% - min(48vw, rem(637)));

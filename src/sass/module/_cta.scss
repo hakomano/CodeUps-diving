@@ -2,12 +2,7 @@
 
 /* ----- 共通CTAセクション ----- */
 .cta{
-  margin-top: rem(80);
   position: relative;
-
-  @include mq(md){
-    margin-top: rem(140);
-  }
 }
 
 .cta::before {
@@ -15,16 +10,15 @@
   content: "";
   background: url(../images/common/fishes-left.svg) no-repeat;
   background-size: contain;
-  max-width: rem(109);
   aspect-ratio: 109 / 50;
-  width: 100%;
+  width: clamp(6.813rem, 2.587rem + 18.03vw, 18.813rem);
+  max-width: 100%;
   height: auto;
   top: rem(-26);
   right: calc(50% - min(48vw, rem(172.5)));
   display: inline-block;
 
   @include mq(md){
-    max-width: rem(301);
     aspect-ratio: 301 / 138;
     top: rem(-39);
     right: calc(50% - min(48vw, rem(670)));
@@ -83,7 +77,7 @@
 }
 
 .cta__info-flex {
-  margin-top: rem(14);
+  margin-top: rem(15);
 
   @include mq(md){
     margin-top: rem(24);

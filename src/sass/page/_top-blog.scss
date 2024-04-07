@@ -33,11 +33,11 @@
     content: "";
     background: url(../images/common/fishes-left-white.svg) no-repeat;
     background-size: contain;
-    top: rem(24);
-    max-width: rem(437);
     aspect-ratio: 437 / 201;
+    max-width: rem(437);
     width: 100%;
     height: auto;
+    top: rem(24);
     left: calc(50% - min(48vw, rem(620)));
     display: inline-block;
   }

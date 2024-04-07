@@ -46,10 +46,18 @@
 //フォントサイズ違い(お問い合わせセクションタイトル)
 .section-heading--big{
   font-size: rem(80);
+
+  @include mq(md){
+    font-size: rem(80);
+  }
 }
 
 .section-heading--big span{
   display: block;
   padding-top: 0;
   margin-top: rem(-4);
+
+  @include mq(md){
+    margin-top: rem(-4);
+  }
 }
