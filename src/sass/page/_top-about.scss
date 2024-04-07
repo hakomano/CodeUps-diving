@@ -9,13 +9,15 @@
   }
 }
 
-.top-about{
+.top-about__inner{
+  max-width: rem(600);  //タブレット時の間延び防止用
+
   @include mq(md){
     position: relative;
   }
 }
 
-.top-about::after{
+.top-about__inner::after{
   @include mq(md){
     position: absolute;
     content: "";
@@ -26,7 +28,7 @@
     width: 100%;
     height: auto;
     right: calc(50% - min(48vw, rem(637)));
-    bottom: rem(-90);
+    bottom: -11.8%;
     display: inline-block;
   }
 }
@@ -42,13 +44,7 @@
 
 .top-about__images{
   margin-inline: auto;
-  max-width: rem(600);  //タブレット時の間延び防止用
-  width: 100%;
   display: flex;
-
-  @include mq(md){
-    max-width: 100%;
-  }
 }
 
 .top-about__img--left{
@@ -98,9 +94,6 @@
 
 .top-about__text-content{
   margin-top: rem(40);
-  margin-inline: auto;
-  max-width: rem(600);  //タブレット時の間延び防止用
-  width: 100%;
 
   @include mq(md){
     display: flex;

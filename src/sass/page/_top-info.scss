@@ -14,6 +14,10 @@
   }
 }
 
+.top-info__inner{
+  max-width: rem(600); //タブレット時の間延び防止用
+}
+
 .top-info__container{
   margin-top: rem(33);
   display: flex;
@@ -30,13 +34,9 @@
 
 .top-info__img{
   display: block;
-  margin-inline: auto;
-  max-width: rem(600);  //タブレット時の間延び防止用
-  width: 100%;
 
   @include mq(md){
     width: calc(540 / 1080 * 100%);
-    max-width: 100%;
   }
 }
 
@@ -52,14 +52,8 @@
 }
 
 .top-info__text-content{
-  margin-inline: auto;
-  max-width: rem(600);  //タブレット時の間延び防止用
-  width: 100%;
-
-
   @include mq(md){
     width: calc(492 / 1080 * 100%);
-    max-width: 100%;
   }
 }
 

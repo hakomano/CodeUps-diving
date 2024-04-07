@@ -11,11 +11,18 @@
     margin-top: rem(145);
     padding-top: rem(100);
     padding-bottom: rem(105);
+  }
+}
+
+.top-price__inner{
+  max-width: rem(600);  //タブレット時の間延び防止用
+
+  @include mq(md){
     position: relative;
   }
 }
 
-.top-price::before{
+.top-price__inner::before{
   @include mq(md){
     position: absolute;
     content: "";
@@ -26,7 +33,7 @@
     width: 100%;
     height: auto;
     left: calc(50% - min(48vw, rem(620)));
-    bottom: rem(60);
+    bottom: -4.5%;
     display: inline-block;
   }
 }
@@ -44,14 +51,9 @@
 
 .top-price__img{
   display: block;
-  margin-inline: auto;
-  max-width: rem(600);  //タブレット時の間延び防止用
-  width: 100%;
 
   @include mq(md){
     width: calc(492 / 1080 * 100%);
-    max-width: 100%;
-    margin: 0;
   }
 }
 
@@ -68,14 +70,10 @@
 
 .top-price__list{
   margin-top: rem(40);
-  margin-inline: auto;
-  max-width: rem(600);  //タブレット時の間延び防止用
-  width: 100%;
 
   @include mq(md){
-    margin: 0;
+    margin-top: 0;
     width: calc(492 / 1080 * 100%);
-    max-width: 100%;
   }
 }
 
