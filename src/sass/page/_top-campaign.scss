@@ -13,6 +13,10 @@
 
 .top-campaign__inner{
   max-width: rem(600);
+
+  @include mq(md){
+    position: relative;
+  }
 }
 
 //スライダー前後ボタン
@@ -20,12 +24,14 @@
   display: none;
 
   @include mq(md){
-    margin-top: rem(-62);
-    margin-left: auto;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 2.2%;
     width: fit-content;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    // align-items: center;
+    // justify-content: flex-end;
     gap: rem(80);
   }
 }
@@ -136,7 +142,7 @@
   padding-bottom: rem(10); //スライダー下が見切れてしまうため
 
   @include mq(md){
-    margin-top: rem(26);
+    margin-top: rem(44);
   }
 }
 

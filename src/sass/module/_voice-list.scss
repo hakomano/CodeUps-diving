@@ -5,14 +5,10 @@
   display: grid;
   gap: rem(40);
   grid-template-columns: repeat(1, 1fr);
-  margin-inline: auto;
-  // max-width: rem(500); //top-voice__listの方で記述
-  // width: 100%; //top-voice__listの方で記述
 
   @include mq(md){
     column-gap: rem(40);
     row-gap: rem(80);
-    // grid-template-columns: repeat(2, 1fr);//top-voice__listの方で記述
-    // max-width: rem(1080); //top-voice__listの方で記述
+    grid-template-columns: repeat(2, 1fr);
   }
 }

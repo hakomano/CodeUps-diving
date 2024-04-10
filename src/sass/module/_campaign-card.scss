@@ -44,9 +44,9 @@
   border-bottom: rem(1) solid $accent-green;
   padding-bottom: rem(8);
   margin-top: rem(6);
-  // flex-grow: 1; //価格下揃え用
+  flex-grow: 1; //価格下揃え用
 
-  //1行を超えると三点リーダーで省略する
+  //1行を超えると三点リーダーで省略する場合はこちら
   // overflow: hidden;
   // display: -webkit-box;
   // -webkit-box-orient: vertical;
@@ -60,7 +60,7 @@
 
 .campaign-card__bottom{
   margin-top: rem(7.5);
-  // margin-top: auto; //価格下揃え用
+  margin-top: auto; //価格下揃え用
 
   @include mq(md){
     margin-top: rem(16);
