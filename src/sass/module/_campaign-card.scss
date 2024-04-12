@@ -59,21 +59,18 @@
 }
 
 .campaign-card__bottom{
-  margin-top: rem(7.5);
   margin-top: auto; //価格下揃え用
-
-  @include mq(md){
-    margin-top: rem(16);
-  }
 }
 
 .campaign-card__text{
+  margin-top: rem(7.5);
   display: block;
   text-align: center;
   font-size: rem(14);
   @include line-height(24,14);
 
   @include mq(md){
+    margin-top: rem(16);
     font-size: rem(16);
     @include line-height(24,16);
   }

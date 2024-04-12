@@ -30,8 +30,6 @@
     right: 2.2%;
     width: fit-content;
     display: flex;
-    // align-items: center;
-    // justify-content: flex-end;
     gap: rem(80);
   }
 }
@@ -137,12 +135,12 @@
 }
 
 .top-campaign__swiper{
-  margin-top: rem(32);
+  margin-top: rem(28);
   margin-right: calc(50% - 50vw);
   padding-bottom: rem(10); //スライダー下が見切れてしまうため
 
   @include mq(md){
-    margin-top: rem(44);
+    margin-top: rem(40);
   }
 }
 

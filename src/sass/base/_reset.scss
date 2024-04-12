@@ -137,6 +137,13 @@ a {
   }
 }
 
+/* 画面幅が768px以上の場合は電話番号クリック不可 */
+@media(min-width: 768px) {
+  a[href^="tel:"] {
+    pointer-events: none;
+  }
+}
+
 /* safariの青い線を消す */
 *:focus {
   outline: none;
