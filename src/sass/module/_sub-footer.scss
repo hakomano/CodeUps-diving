@@ -1,0 +1,18 @@
+@use "global" as *;
+
+/* ----- 下層ページのフッター(共通) ----- */
+.sub-footer{
+  margin-top: rem(106);
+
+  @include mq(md){
+    margin-top: rem(160);
+  }
+}
+
+.sub-footer--404page{
+  margin-top: rem(45);
+
+  @include mq(md){
+    margin-top: rem(152);
+  }
+}

@@ -1,0 +1,68 @@
+@use "global" as *;
+
+/* ----- プライバシーポリシー ----- */
+.sub-privacy-policy{
+  margin-top: rem(56);
+
+  @include mq(md){
+    margin-top: rem(152);
+  }
+}
+
+.sub-privacy-policy__inner {
+  max-width: rem(600); //タブレット時の間延び防止用
+  width: 100%;
+  padding-right: $padding-sp;
+  padding-left: $padding-sp;
+  margin-inline: auto;
+
+  @include mq(md){
+    max-width: calc(rem(800) + $padding-pc * 2);
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+}
+
+.sub-privacy-policy__title {
+  font-size: rem(24);
+  font-weight: $medium;
+  position: relative;
+  z-index: 1;
+
+  @include mq(md){
+    font-size: rem(32);
+  }
+}
+
+.sub-privacy-policy__text-box {
+  margin-top: rem(40);
+  font-size: rem(16);
+  @include line-height(32,16);
+
+  @include mq(md){
+    margin-top: rem(40);
+  }
+}
+
+.sub-privacy-policy__text {
+  margin-top: rem(32);
+}
+
+.sub-privacy-policy__list {
+  counter-reset: li_count; //カウンタをセット
+}
+
+.sub-privacy-policy__list:nth-of-type(1){
+  margin-top: rem(31);
+}
+
+.sub-privacy-policy__list-item {
+  text-indent: -1.4em;
+  padding-left: 1.5em;
+}
+
+.sub-privacy-policy__list-item::before  {
+  counter-increment: li_count; //カウンタの値を計算していく
+  content: counter(li_count)"."; //数字出力
+  padding-left: 5px;
+}

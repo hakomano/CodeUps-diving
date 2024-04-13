@@ -26,7 +26,7 @@ $bold: 700;
 
 // レタースペーシング(文字間)
 @mixin letter-spacing($l-spa) {
-  letter-spacing: calc(($l-spa / 1000) * 1em);
+  letter-spacing: calc(($l-spa / 100) * 1em);
 }
 
 // ラインハイト(行間)
