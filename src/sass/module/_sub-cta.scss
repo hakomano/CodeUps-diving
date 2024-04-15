@@ -9,8 +9,8 @@
   }
 }
 
-//サイトマップページは余白変わる
-.sub-cta--map{
+//サイトマップページのCTAセクション余白
+.sub-cta--map-margin{
   margin-top: rem(94);
 
   @include mq(md){

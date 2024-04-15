@@ -7,7 +7,7 @@
     <!-- テスト・課題・ポートフォリオ時のみ -->
     <meta name="robots" content="noindex">
     <!-- meta情報 -->
-    <title>利用規約 || CodeUps</title>
+    <title>お問い合わせ || CodeUps</title>
     <!-- <meta name="description" content="ここにWebページの説明文">
     <meta name="keywords" content="ここに検索ワードを「,」区切りで入力"> -->
     <!-- ogp -->
@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- JavaScript -->
     <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script defer src="./assets/js/script-simple.js"></script>
+    <script defer src="./assets/js/script-contact.js"></script>
   </head>
 
   <body>
@@ -188,11 +188,11 @@
 
     <main>
       <section class="sub-fv">
-        <h1 class="sub-fv__title">Terms of Service</h1>
+        <h1 class="sub-fv__title">Contact</h1>
         <div class="sub-fv__img">
           <picture>
-            <source srcset="./assets/images/fv/fv-sub-common-pc@2x.jpg" media="(min-width: 768px)">
-            <img src="./assets/images/fv/fv-sub-common-sp@2x.jpg" alt="" width="375" height="460" decoding="async">
+            <source srcset="./assets/images/fv/fv-sub-contact-pc@2x.jpg" media="(min-width: 768px)">
+            <img src="./assets/images/fv/fv-sub-contact-sp@2x.jpg" alt="" width="375" height="460" decoding="async">
           </picture>
         </div>
       </section>
@@ -213,7 +213,7 @@
               <li itemprop="itemListElement" itemscope
                   itemtype="https://schema.org/ListItem">
                   <a itemprop="item" href="./terms-of-service.html">
-                      <span itemprop="name">利用規約</span>
+                      <span itemprop="name">お問い合わせ</span>
                   </a>
                   <meta itemprop="position" content="2" />
               </li>
@@ -223,91 +223,95 @@
         </div>
       </div>
 
-      <section class="terms-of-service sub-terms-of-service">
-        <div class="sub-terms-of-service__inner">
-          <div class="sub-terms-of-service__bg sub-bg">
-            <h2 class="sub-terms-of-service__title">利用規約</h2>
-            <div class="sub-terms-of-service__text-box">
-              <p class="sub-terms-of-service__text">
-                以下は、Webサイトで使用する一般的な利用規約の例です。
-              </p>
-              <ol class="sub-terms-of-service__list">
-                <li class="sub-terms-of-service__list-item">
-                  概要 この利用規約は、当社が提供するサービスの利用に関する条件を定めたものです。本規約に同意いただくことで、当社のサービスを利用いただけます。なお、本規約に違反した場合、当社はサービスの提供を中止することがあります。
-                </li>
-                <li class="sub-terms-of-service__list-item">
-                  サービスの利用 当社のサービスは、お客様が自己責任において利用するものとし、当社はその利用に対して責任を負いません。また、当社はいつでも、サービスの提供を中止することができるものとします。
-                </li>
-                <li class="sub-terms-of-service__list-item">
-                  禁止事項 お客様は、以下の行為を禁止します。
-                </li>
-              </ol>
-              <p class="sub-terms-of-service__text">・当社のサービスに対して不正なアクセスをすること ・当社のサービスにおいて、他のユーザーに対して迷惑をかける行為をすること ・当社のサービスを商業目的で利用すること ・当社のサービスに関する知的財産権を侵害する行為をすること ・その他、法律や公序良俗に反する行為をすること</p>
-              <ol class="sub-terms-of-service__list">
-                <li class="sub-terms-of-service__list-item">
-                  知的財産権 当社のサービスに関する知的財産権は、当社または当社にライセンスを許諾している者に帰属します。お客様は、当社の事前の承諾なしに、当社のサービスに関する知的財産権を使用することはできません。
-                </li>
-                <li class="sub-terms-of-service__list-item">
-                  免責事項 当社は、当社のサービスに関連して発生した損害について、一切の責任を負わないものとします。また、当社は、当社のサービスにより提供される情報の正確性、信頼性、完全性、適時性についても一切保証しません。
-                </li>
-                <li class="sub-terms-of-service__list-item">
-                  プライバシー 当社は、お客様の個人情報を適切に保護するために、個人情報保護方針に従って適切な取扱いを行います。
-                </li>
-                <li class="sub-terms-of-service__list-item">
-                  その他の規定 本規約は、日本法に準拠して解釈されるものとし、当社とお客様は、本規約に関する紛争が生じた場合、東京地方裁判所を第一審の専属的合意管轄裁判所とすることに同意します。
-                </li>
-                <li class="sub-terms-of-service__list-item">
-                  利用規約の変更 当社は、必要に応じて本利用規約を変更することがあります。変更後の利用規約は、当社のサイトに掲載された時点から効力を有するものとします。変更があった場合、当社は適切な手段でお知らせします。
-                </li>
-              </ol>
-              <p class="sub-terms-of-service__text">
-                以上が、当社の利用規約の概要です。お客様のサービス利用にあたっては、本規約をお読みいただき、同意いただける場合のみサービスをご利用ください。
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!-- お問い合わせフォーム -->
+      <div class="contact sub-contact">
+        <div class="sub-contact__inner">
+          <div class="sub-contact__bg sub-bg">
+            <!-- 未入力時エラーメッセージ -->
+            <p class="sub-contact__error js-contact-error">
+              ※必須項目が入力されていません。<br class="u-mobile">入力してください。
+            </p>
+            <p class="sub-contact__error js-check-error">
+              ※必須項目がチェックされていません。<br class="u-mobile">選択してください。
+            </p>
+            <p class="sub-contact__error js-agree-error">
+              ※個人情報の取り扱いについて同意がされていません。<br class="u-mobile">チェックしてください。
+            </p>
+            <!-- コンタクトフォーム -->
+            <form class="sub-contact__form contact-form js-form" novalidate>
+              <div class="contact-form__item">
+                <label for="name" class="contact-form__label">
+                  お名前<span class="contact-form__required">必須</span>
+                </label>
+                <input id="name" type="text" class="contact-form__input" placeholder="沖縄　太郎" required>
+              </div>
 
-      <!-- 共通CTAセクション -->
-      <section class="cta sub-cta">
-        <div class="cta__inner inner">
-          <div class="cta__container">
-            <div class="cta__info">
-              <div class="cta__logo logo">
-                <img src="./assets/images/common/logo-green.svg" alt="code ups" width="200" height="75">
+              <div class="contact-form__item">
+                <label for="mail" class="contact-form__label">
+                  メールアドレス<span class="contact-form__required">必須</span>
+                </label>
+                <input id="mail" type="email" class="contact-form__input" placeholder="aaa000@ggmail.com" required>
               </div>
-              <hr>
-              <div class="cta__info-flex">
-                <div class="cta__info-detail">
-                  <address><p>沖縄県那覇市1-1</p></address>
-                  <address><a href="tel:0120-000-0000"><p>TEL:<span>0120-000-0000</span></p></a></address>
-                  <p>営業時間:<span>8:30-19:00</span></p>
-                  <p>定休日:<span>毎週火曜日</span></p>
+
+              <div class="contact-form__item">
+                <label for="tel" class="contact-form__label">
+                  電話番号<span class="contact-form__required">必須</span>
+                </label>
+                <input id="tel" type="tel" class="contact-form__input" placeholder="000-0000-0000" required>
+              </div>
+
+              <div class="contact-form__item">
+                <div class="contact-form__label">
+                  お問合せ項目<span class="contact-form__required">必須</span>
                 </div>
-                <div class="cta__info-map">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57272.560037403666!2d127.69363324863279!3d26.2118006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56d2cf193f5a9%3A0x82601d45c6cb5d01!2z44Kt44Oj44OX44OG44Oz44Oq44K-44O844OI!5e0!3m2!1sja!2sjp!4v1710830816059!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="contact-form__checkbox">
+                  <label><input type="checkbox" name="entry" value="ダイビング講習について" required><span>ダイビング講習について</span></label>
+                  <label><input type="checkbox" name="entry" value="ファンデイビングについて" required><span>ファンデイビングについて</span></label>
+                  <label><input type="checkbox" name="entry" value="体験ダイビングについて" required><span>体験ダイビングについて</span></label>
                 </div>
               </div>
-            </div>
-            <div class="cta__link">
-              <div class="cta__heading section-heading">
-                <p class="section-heading__en section-heading__en--big">contact</p>
-                <h2 class="section-heading__ja section-heading__ja--big">お問い合わせ</h2>
+
+              <div class="contact-form__item">
+                <div class="contact-form__label">
+                  キャンペーン
+                </div>
+                <div class="contact-form__select">
+                  <select>
+                    <option hidden>キャンペーン内容を選択</option>
+                    <option value="ライセンス取得">ライセンス取得</option>
+                    <option value="貸切体験ダイビング">貸切体験ダイビング</option>
+                    <option value="ナイトダイビング">ナイトダイビング</option>
+                    <option value="貸切ファンダイビング">貸切ファンダイビング</option>
+                    <option value="その他">その他</option>
+                  </select>
+                </div>
               </div>
-              <p class="cta__text">
-                ご予約・お問い合わせはコチラ
-              </p>
-              <div class="cta__btn">
-                <a href="#" class="button"><div></div><span>contact us</span></a>
+
+              <div class="contact-form__item">
+                <label for="message" class="contact-form__label">
+                  お問合せ内容<span class="contact-form__required">必須</span>
+                </label>
+                <textarea name="message" class="contact-form__textarea" required></textarea>
               </div>
-            </div>
+
+              <div class="contact-form__privacy">
+                <label>
+                  <input type="checkbox" name="agree" value="agree">
+                  <span><a href="./privacy-policy.html">個人情報</a>の取り扱いについて同意のうえ送信します。</span>
+                </label>
+              </div>
+
+              <div class="contact-form__submit">
+                <button class="button button--submit js-submit" type="submit"><div></div><span>send</span></button>
+              </div>
+            </form>
           </div>
         </div>
-      </section>
+      </div>
     </main>
 
     <!-- フッター -->
-    <footer class="footer sub-footer">
+    <footer class="footer sub-footer sub-footer--contact">
       <div class="footer__inner inner">
         <div class="footer__head">
           <div class="footer__logo logo">

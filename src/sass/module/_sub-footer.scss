@@ -9,10 +9,21 @@
   }
 }
 
+// 404ページのフッター上余白
 .sub-footer--404page{
   margin-top: rem(45);
 
   @include mq(md){
     margin-top: rem(152);
+  }
+}
+
+// お問い合わせページのフッター上余白
+.sub-footer--contact{
+  margin-top: rem(148);
+  // margin-top: rem(146);
+
+  @include mq(md){
+    margin-top: rem(120);
   }
 }

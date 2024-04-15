@@ -5,14 +5,17 @@
   max-width: 100%;
   display: inline-block; //blockではなくinline-blockの方が親要素で中央揃えなどの指定ができる
 
-  padding: rem(15) rem(40);
+  padding: rem(15) rem(16);
+  // padding: rem(15) rem(40);
   border: rem(1) solid $accent-green;
   background: $accent-green;
   color: $white;
   font-size: rem(14);
   font-family: $english-font-family;
   @include line-height(22,14);
-  text-align: left;
+
+  text-align: center;
+  // text-align: left;
   position: relative;
   z-index: 1;
   -webkit-tap-highlight-color: transparent;
@@ -30,6 +33,9 @@
 
 .button span{
   display: inline-block;
+
+  padding-right: rem(48);
+  position: relative;
 }
 
 .button span::first-letter{
@@ -45,7 +51,9 @@
 .button span::before {
   width: rem(10);
   height: rem(10);
-  right: rem(42);
+
+  right: 0;
+  // right: rem(42);
   top: 50%;
   transform: translateY(-40%) rotate(45deg);
   border-top: rem(1) solid $white;
@@ -54,7 +62,9 @@
 .button span::after {
   width: rem(40);
   height: rem(1);
-  right: rem(40);
+
+  right: 0;
+  // right: rem(40);
   top: 53%;
   transform: translateY(-40%);
   background: $white;
@@ -87,6 +97,10 @@
   border: rem(1) solid $white;
 }
 
+.button--reversal span{
+  padding-right: rem(57);
+}
+
 .button--reversal span::before{
   border-top: rem(1) solid $accent-green;
 }
@@ -98,6 +112,12 @@
 .button--reversal::after{
   background: $accent-green;
 }
+
+//送信ボタン(お問い合わせページ)
+.button--submit span{
+  padding-right: rem(56);
+}
+
 
 //ボタンホバー・アクティブ処理(hover使用可否で切替)
 @media (hover: hover) {

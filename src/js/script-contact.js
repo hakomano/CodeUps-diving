@@ -108,9 +108,115 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
 
+  //========================================================*
+  // お問い合わせフォームの必須項目チェック
+  //========================================================*
+  $('.js-form').submit(function (event) {
+    // エラーメッセージ要素を取得
+    var errorMessage = $('.js-contact-error');
+    var errorMessageCheck = $('.js-check-error');
+    var errorMessageAgree = $('.js-agree-error');
 
+    //エラーメッセージリセット
+    errorMessage.hide();
+    errorMessageCheck.hide();
+    errorMessageAgree.hide();
 
+    // 入力フィールドに変更があった場合、エラークラスを削除
+    $('input, textarea').on('input', function () {
+      if ($(this).hasClass('error')) {
+        $(this).removeClass('error'); // エラークラスを削除
+        $('input[name="entry"]').removeClass('error'); //チェックボックス１つ選択で全てのエラークラス削除
+      }
+    });
+
+    // 必須入力項目の検証
+    var name = $('input[type="text"]').val().trim();
+    var email = $('input[type="email"]').val().trim();
+    var tel = $('input[type="tel"]').val().trim();
+    var message = $('textarea[name="message"]').val().trim();
+    var formValid = true;
+    var formChecked = true;
+    var formAgree = true;
+
+    // 未入力の必須項目があるかチェックし、対象の入力欄にクラス追加
+    if (!name) {
+      $('input[type="text"]').addClass('error');
+      formValid = false;
+    }
+    if (!email) {
+      $('input[type="email"]').addClass('error');
+      formValid = false;
+    }
+    if (!tel) {
+      $('input[type="tel"]').addClass('error');
+      formValid = false;
+    }
+    if (!message) {
+      $('textarea[name="message"]').addClass('error');
+      formValid = false;
+    }
+
+    // お問い合わせ項目のチェックボックス検証(1つ以上のチェック)
+    var entryChecked = $('input[name="entry"]:checked').length > 0;
+    if (!entryChecked) {
+      $('input[name="entry"]').addClass('error');
+      formChecked = false;
+    }
+
+    // プライバシーポリシー同意のチェックボックス検証
+    var privacyChecked = $('input[name="agree"]:checked').length > 0;
+    if (!privacyChecked) {
+      formAgree = false;
+    }
+
+    // 未入力箇所に応じてエラーメッセージを表示し、送信を中止
+    // チェックボックス選択がない(他の入力欄は入力あり)場合
+    if(!formChecked && formValid){
+      event.preventDefault(); // フォームの送信を中止
+      errorMessageCheck.show();
+      $('.js-form').css('margin-top', '2.5rem');
+      $("body,html").animate(
+        {
+          scrollTop: 400,
+        },
+        1
+      );
+    // 同意チェックのみがない場合
+    } else if(!formAgree && formValid && formChecked){
+      event.preventDefault();
+      errorMessageAgree.show();
+      $('.js-form').css('margin-top', '2.5rem');
+      $('input[name="agree"]').addClass('error');
+      $("body,html").animate(
+        {
+          scrollTop: 400,
+        },
+        1
+      );
+    // 入力欄の未入力がある場合
+    } else if(!formValid) {
+      event.preventDefault();
+      errorMessage.show();
+      $('.js-form').css('margin-top', '2.5rem');
+      $("body,html").animate(
+        {
+          scrollTop: 400,
+        },
+        1
+      );
+    } else {
+      errorMessageCheck.hide();
+      errorMessageAgree.hide();
+      errorMessage.hide();
+
+      event.preventDefault(); // 送信できるようにする時は消す
+    }
+  });
 
 
 });
+
+
+
 

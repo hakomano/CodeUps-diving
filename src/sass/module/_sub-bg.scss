@@ -16,13 +16,21 @@
   height: auto;
   top: rem(-24);
   left: 0;
-  // left: 4%;
-  // left: calc(50% - min(48vw, rem(172.5)));
   display: inline-block;
+  z-index: -1;
 
   @include mq(md){
     aspect-ratio: 301 / 138;
     top: rem(-68);
     left: calc(50% - min(48vw, rem(620)));
+  }
+}
+
+//PCのみイラスト非表示(サイトマップページ)
+.sub-bg--pc-none::before{
+  top: rem(-10);
+
+  @include mq(md){
+    content: none;
   }
 }
