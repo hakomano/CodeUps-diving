@@ -1,14 +1,6 @@
 @use "global" as *;
 
 /* ----- プライバシーポリシー ----- */
-.sub-privacy-policy{
-  margin-top: rem(56);
-
-  @include mq(md){
-    margin-top: rem(152);
-  }
-}
-
 .sub-privacy-policy__inner {
   max-width: rem(600); //タブレット時の間延び防止用
   width: 100%;
@@ -53,7 +45,7 @@
 }
 
 .sub-privacy-policy__list:nth-of-type(1){
-  margin-top: rem(31);
+  margin-top: rem(32);
 }
 
 .sub-privacy-policy__list-item {

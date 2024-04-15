@@ -1,0 +1,10 @@
+@use "global" as *;
+
+/* ----- 下層ページのメインコンテンツ上余白(共通) ----- */
+.sub-layout{
+  margin-top: rem(49); //お問い合わせ・サンクス・利用規約・プラ・FAQ
+
+  @include mq(md){
+    margin-top: rem(147); //お問い合わせ・サンクス・利用規約・プラ・FAQ
+  }
+}

@@ -2,11 +2,10 @@
 
 /* ----- 下層ページのサイトマップ ----- */
 .sub-site-map{
-  margin-top: rem(42);
-  position: relative;
+  margin-top: rem(36);
 
   @include mq(md){
-    margin-top: rem(140);
+    margin-top: rem(135);
   }
 }
 

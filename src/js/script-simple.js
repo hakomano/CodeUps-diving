@@ -108,8 +108,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
 
-
-
+  //========================================================*
+  // アコーディオンメニュー(FAQページ)
+  //========================================================*
+  $('.js-faq-question').on('click', function () {
+    $(this).next().slideToggle();
+    $(this).toggleClass('active');
+  });
 
 
 });

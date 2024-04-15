@@ -3,23 +3,26 @@
 /* ----- パンくずリスト(共通) ----- */
 //WPプラグイン「Breadcrumb NavXT」使用予定
 .sub-breadcrumbs{
-  font-size: rem(14);
-  line-height: 1;
-  text-transform: uppercase;
-  margin-top: rem(10);
+  margin-top: rem(6); //サンクス・お問い合わせ・利用規約・プラ・map・faq
 
   @include mq(md){
-    margin-top: rem(11);
+    margin-top: rem(5.5); //サンクス・お問い合わせ・利用規約・プラ・map・faq
   }
 }
 
+.sub-breadcrumbs span{
+  font-size: rem(14);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 //404ページ用(FV無し)
-.sub-breadcrumbs--404page{
+.sub-breadcrumbs--page404{
   color: $white;
-  margin-top: rem(90);
+  margin-top: rem(86);
 
   @include mq(md){
-    margin-top: rem(100);
+    margin-top: rem(96);
   }
 }
 
@@ -41,10 +44,4 @@
   content: '>';
   padding: 0 rem(4);
 }
-
-// .breadcrumbs__list a {
-//   font-size: rem(14);
-//   line-height: 1;
-//   text-transform: uppercase;
-// }
 // WP化する時は下記を消す(ここまで)

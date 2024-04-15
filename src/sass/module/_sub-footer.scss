@@ -2,7 +2,7 @@
 
 /* ----- 下層ページのフッター(共通) ----- */
 .sub-footer{
-  margin-top: rem(106);
+  margin-top: rem(105);
 
   @include mq(md){
     margin-top: rem(160);
@@ -10,7 +10,7 @@
 }
 
 // 404ページのフッター上余白
-.sub-footer--404page{
+.sub-footer--page404{
   margin-top: rem(45);
 
   @include mq(md){
@@ -18,10 +18,9 @@
   }
 }
 
-// お問い合わせページのフッター上余白
+// お問い合わせページ・サンクスページのフッター上余白
 .sub-footer--contact{
-  margin-top: rem(148);
-  // margin-top: rem(146);
+  margin-top: rem(146);
 
   @include mq(md){
     margin-top: rem(120);
