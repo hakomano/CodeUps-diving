@@ -8,12 +8,14 @@
 
   @include mq(md){
     column-gap: rem(40);
-    row-gap: rem(80);
+    row-gap: rem(79);
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 //下層ページ時
 .blog-list--2col{
-  grid-template-columns: repeat(2, 1fr);
+  @include mq(md){
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

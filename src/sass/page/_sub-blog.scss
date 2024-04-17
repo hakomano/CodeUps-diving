@@ -1,0 +1,56 @@
+@use "global" as *;
+
+/* ----- 下層ページのBlog(ブログ一覧) ----- */
+.sub-blog{
+
+}
+
+.sub-blog__bg{
+  display: flex;
+  flex-direction: column;
+  gap: rem(79);
+
+  @include mq(md){
+    flex-direction: row;
+    gap: rem(80);
+  }
+}
+
+
+.sub-blog__main-content{
+
+  @include mq(md){
+    width: 65.37%;
+    max-width: 100%;
+  }
+}
+
+.sub-blog__list{
+  padding-inline: rem(6);
+
+  @include mq(md){
+    padding-inline: 0;
+  }
+}
+
+.sub-blog__sidebar{
+  padding-inline: rem(25.5);
+
+  @include mq(md){
+    width: 27.2%;
+    max-width: 100%;
+    padding-inline: 0;
+  }
+}
+
+.sub-blog__sidebar-block + .sub-blog__sidebar-block{
+  margin-top: rem(81);
+
+  @include mq(md){
+    margin-top: rem(81);
+  }
+}
+
+.sub-blog__pagenavi{
+  margin-top: rem(80);
+}

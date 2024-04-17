@@ -116,6 +116,18 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(this).toggleClass('active');
   });
 
+  //========================================================*
+  // アコーディオンメニュー(サイドバーのアーカイブ)
+  //========================================================*
+  //1番上のメニューは開いておく
+  $(".sidebar-archive__year:first-of-type .sidebar-archive__list-months").css("display", "block");
+  $(".sidebar-archive__year:first-of-type > .js-archive-toggle").addClass("active");
+
+  $('.js-archive-toggle').on('click', function () {
+    $(this).next().slideToggle();
+    $(this).toggleClass('active');
+  });
+
 
 });
 
