@@ -1,0 +1,30 @@
+@use "global" as *;
+
+/* ----- 下層ページのブログ詳細ページ ----- */
+.sub-single-blog__container{
+  display: flex;
+  flex-direction: column;
+  gap: rem(79);
+
+  @include mq(md){
+    flex-direction: row;
+    gap: rem(86);
+  }
+}
+
+.sub-single-blog__main-content{
+  width: 100%;
+
+  @include mq(md){
+    width: 64.8%;
+    max-width: 100%;
+  }
+}
+
+.sub-single-blog__pagenavi{
+  margin-top: rem(39);
+
+  @include mq(md){
+    margin-top: rem(80);
+  }
+}

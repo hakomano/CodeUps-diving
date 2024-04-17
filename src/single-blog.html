@@ -7,7 +7,7 @@
     <!-- テスト・課題・ポートフォリオ時のみ -->
     <meta name="robots" content="noindex">
     <!-- meta情報 -->
-    <title>ブログ一覧 || CodeUps</title>
+    <title>ブログ詳細 || CodeUps</title>
     <meta name="description" content="ここにWebページの説明文">
     <meta name="keywords" content="ここに検索ワードを「,」区切りで入力">
     <!-- ogp -->
@@ -208,14 +208,21 @@
                   <a itemprop="item" href="./index.html">
                       <span itemprop="name">top</span>
                   </a>
-                  <meta itemprop="position" content="1" />
+                  <meta itemprop="position" content="1">
               </li>
               <li itemprop="itemListElement" itemscope
                   itemtype="https://schema.org/ListItem">
                   <a itemprop="item" href="./blog.html">
                       <span itemprop="name">ブログ一覧</span>
                   </a>
-                  <meta itemprop="position" content="2" />
+                  <meta itemprop="position" content="2">
+              </li>
+              <li itemprop="itemListElement" itemscope
+                  itemtype="https://schema.org/ListItem">
+                  <a itemprop="item" href="./single-blog.html">
+                      <span itemprop="name">ブログ詳細</span>
+                  </a>
+                  <meta itemprop="position" content="3">
               </li>
             </ol>
           </nav>
@@ -224,190 +231,58 @@
       </div>
 
       <!-- ブログ一覧 -->
-      <div class="blog sub-blog sub-layout">
-        <div class="sub-blog__inner inner">
-          <div class="sub-blog__bg sub-bg">
-            <div class="sub-blog__container">
-              <div class="sub-blog__main-content">
-                <ul class="sub-blog__list blog-list blog-list--2col">
-                  <li class="blog-list__item blog-card">
-                    <a href="./single-blog.html">
-                      <figure class="blog-card__img">
-                        <img src="./assets/images/blog/blog1@2x.jpg" alt="海中のピンク色のサンゴ" width="301" height="201" loading="lazy" decoding="async">
-                      </figure>
-                      <div class="blog-card__content">
-                        <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                        <h2 class="blog-card__title">ライセンス取得</h2>
-                        <p class="blog-card__text">
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                        </p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="blog-list__item blog-card">
-                    <a href="./single-blog.html">
-                      <figure class="blog-card__img">
-                        <img src="./assets/images/blog/blog2@2x.jpg" alt="海の中を泳ぐウミガメ" width="301" height="201" loading="lazy" decoding="async">
-                      </figure>
-                      <div class="blog-card__content">
-                        <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                        <h2 class="blog-card__title">ウミガメと泳ぐ</h2>
-                        <p class="blog-card__text">
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                        </p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="blog-list__item blog-card">
-                    <a href="./single-blog.html">
-                      <figure class="blog-card__img">
-                        <img src="./assets/images/blog/blog3@2x.jpg" alt="イソギンチャクの隙間から除くカクレクマノミ" width="301" height="201" loading="lazy" decoding="async">
-                      </figure>
-                      <div class="blog-card__content">
-                        <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                        <h2 class="blog-card__title">カクレクマノミ</h2>
-                        <p class="blog-card__text">
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                        </p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="blog-list__item blog-card">
-                    <a href="./single-blog.html">
-                      <figure class="blog-card__img">
-                        <img src="./assets/images/blog/blog4@2x.jpg" alt="泳いでいる黄色の魚" width="301" height="201" loading="lazy" decoding="async">
-                      </figure>
-                      <div class="blog-card__content">
-                        <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                        <h2 class="blog-card__title">ライセンス取得</h2>
-                        <p class="blog-card__text">
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                        </p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="blog-list__item blog-card">
-                    <a href="./single-blog.html">
-                      <figure class="blog-card__img">
-                        <img src="./assets/images/blog/blog5@2x.jpg" alt="まだら模様のウミウシ" width="301" height="201" loading="lazy" decoding="async">
-                      </figure>
-                      <div class="blog-card__content">
-                        <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                        <h2 class="blog-card__title">ウミガメと泳ぐ</h2>
-                        <p class="blog-card__text">
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                        </p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="blog-list__item blog-card">
-                    <a href="./single-blog.html">
-                      <figure class="blog-card__img">
-                        <img src="./assets/images/blog/blog6@2x.jpg" alt="小さなクラゲの大群" width="301" height="201" loading="lazy" decoding="async">
-                      </figure>
-                      <div class="blog-card__content">
-                        <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                        <h2 class="blog-card__title">カクレクマノミ</h2>
-                        <p class="blog-card__text">
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                        </p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="blog-list__item blog-card">
-                    <a href="./single-blog.html">
-                      <figure class="blog-card__img">
-                        <img src="./assets/images/blog/blog3@2x.jpg" alt="イソギンチャクの隙間から除くカクレクマノミ" width="301" height="201" loading="lazy" decoding="async">
-                      </figure>
-                      <div class="blog-card__content">
-                        <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                        <h2 class="blog-card__title">カクレクマノミ</h2>
-                        <p class="blog-card__text">
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                        </p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="blog-list__item blog-card">
-                    <a href="./single-blog.html">
-                      <figure class="blog-card__img">
-                        <img src="./assets/images/blog/blog4@2x.jpg" alt="泳いでいる黄色の魚" width="301" height="201" loading="lazy" decoding="async">
-                      </figure>
-                      <div class="blog-card__content">
-                        <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                        <h2 class="blog-card__title">ライセンス取得</h2>
-                        <p class="blog-card__text">
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                        </p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="blog-list__item blog-card">
-                    <a href="./single-blog.html">
-                      <figure class="blog-card__img">
-                        <img src="./assets/images/blog/blog5@2x.jpg" alt="まだら模様のウミウシ" width="301" height="201" loading="lazy" decoding="async">
-                      </figure>
-                      <div class="blog-card__content">
-                        <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                        <h2 class="blog-card__title">ウミガメと泳ぐ</h2>
-                        <p class="blog-card__text">
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                        </p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="blog-list__item blog-card">
-                    <a href="./single-blog.html">
-                      <figure class="blog-card__img">
-                        <img src="./assets/images/blog/blog6@2x.jpg" alt="小さなクラゲの大群" width="301" height="201" loading="lazy" decoding="async">
-                      </figure>
-                      <div class="blog-card__content">
-                        <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                        <h2 class="blog-card__title">カクレクマノミ</h2>
-                        <p class="blog-card__text">
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
-                          ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                        </p>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
+      <div class="single-blog sub-single-blog sub-layout">
+        <div class="sub-single-blog__inner inner">
+          <div class="sub-single-blog__bg sub-bg">
+            <div class="sub-single-blog__container">
+              <div class="sub-single-blog__main-content">
+                <article class="sub-single-blog__article single-blog">
+                  <time class="single-blog__date" datetime="2023-11-17">2023.11/17</time>
+                  <h2 class="single-blog__title">ライセンス取得</h2>
+                  <div class="single-blog__article-content">
+                    <figure class="single-blog__img">
+                      <img src="./assets/images/blog/blog1@2x.jpg" alt="海中のピンク色のサンゴ" width="345" height="231" loading="lazy" decoding="async">
+                    </figure>
+                    <p class="single-blog__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                    </p>
+                    <figure class="single-blog__img">
+                      <img src="./assets/images/blog/blog1@2x.jpg" alt="海中のピンク色のサンゴ" width="345" height="231" loading="lazy" decoding="async">
+                    </figure>
+                    <p class="single-blog__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                    </p>
+                    <ul class="single-blog__list">
+                      <li class="single-blog__list-item">リスト１</li>
+                      <li class="single-blog__list-item">リスト2</li>
+                      <li class="single-blog__list-item">リスト3</li>
+                    </ul>
+                    <p class="single-blog__text">
+                      ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                    </p>
+                  </div>
+                </article>
+    
                 <!-- ページネーション ※WP化時にプラグインWP-PageNavi使用予定 -->
-                <div class="sub-blog__pagenavi pagenavi">
+                <div class="sub-single-blog__pagenavi pagenavi">
                   <div class="pagenavi__inner">
                     <!-- WP-PageNaviで出力される部分 ここから -->
-                    <div class='wp-pagenavi' role='navigation'>
+                    <div class="wp-pagenavi wp-pagenavi--prev-next" role="navigation">
                       <a class="previouspostslink" rel="prev" href="#"><</a>
-                      <span class='current'>1</span>
-                      <a class="page larger" href="#">2</a>
-                      <a class="page larger" href="#">3</a>
-                      <a class="page larger" href="#">4</a>
-                      <!-- SP時は5・6不要 -->
-                      <!-- <a class="page larger" href="#">5</a>
-                      <a class="page larger" href="#">6</a> -->
                       <a class="nextpostslink" rel="next" href="#">></a>
                     </div>
                     <!-- WP-PageNaviで出力される部分 ここまで -->
                   </div>
                 </div>
               </div>
-
+  
               <!-- サイドバー -->
               <aside class="sub-blog__sidebar sidebar">
                 <section class="sidebar__block popular-blog">
                   <h2 class="popular-blog__title sidebar-title">人気記事</h2>
                   <ul class="popular-blog__list sidebar-list-layout">
                     <li class="popular-blog__item blog-mini-card">
-                      <a href="./single-blog.html">
+                      <a href="#">
                         <figure class="blog-mini-card__img">
                           <img src="./assets/images/blog/blog4@2x.jpg" alt="泳いでいる黄色の魚" width="121" height="90" loading="lazy" decoding="async">
                         </figure>
@@ -418,7 +293,7 @@
                       </a>
                     </li>
                     <li class="popular-blog__item blog-mini-card">
-                      <a href="./single-blog.html">
+                      <a href="#">
                         <figure class="blog-mini-card__img">
                           <img src="./assets/images/blog/blog2@2x.jpg" alt="海の中を泳ぐウミガメ" width="121" height="90" loading="lazy" decoding="async">
                         </figure>
@@ -429,7 +304,7 @@
                       </a>
                     </li>
                     <li class="popular-blog__item blog-mini-card">
-                      <a href="./single-blog.html">
+                      <a href="#">
                         <figure class="blog-mini-card__img">
                           <img src="./assets/images/blog/blog3@2x.jpg" alt="イソギンチャクの隙間から除くカクレクマノミ" width="121" height="90" loading="lazy" decoding="async">
                         </figure>

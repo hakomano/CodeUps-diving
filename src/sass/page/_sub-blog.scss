@@ -1,11 +1,7 @@
 @use "global" as *;
 
 /* ----- 下層ページのBlog(ブログ一覧) ----- */
-.sub-blog{
-
-}
-
-.sub-blog__bg{
+.sub-blog__container{
   display: flex;
   flex-direction: column;
   gap: rem(79);
@@ -16,8 +12,8 @@
   }
 }
 
-
 .sub-blog__main-content{
+  width: 100%;
 
   @include mq(md){
     width: 65.37%;
@@ -30,24 +26,6 @@
 
   @include mq(md){
     padding-inline: 0;
-  }
-}
-
-.sub-blog__sidebar{
-  padding-inline: rem(25.5);
-
-  @include mq(md){
-    width: 27.2%;
-    max-width: 100%;
-    padding-inline: 0;
-  }
-}
-
-.sub-blog__sidebar-block + .sub-blog__sidebar-block{
-  margin-top: rem(81);
-
-  @include mq(md){
-    margin-top: rem(81);
   }
 }
 
