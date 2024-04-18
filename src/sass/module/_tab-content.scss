@@ -7,6 +7,9 @@
 
 .tab-content__box{
   display: none;
+}
+
+.tab-content__box--padding{
   padding-inline: rem(32.5);
 
   @include mq(md){
