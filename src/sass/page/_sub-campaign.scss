@@ -1,0 +1,10 @@
+@use "global" as *;
+
+/* ----- 下層ページのキャンペーンページ ----- */
+.sub-campaign__inner{
+  max-width: rem(600); //タブレット時の間延び防止用
+}
+
+.sub-campaign__pagenavi{
+  margin-top: rem(80);
+}

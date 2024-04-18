@@ -1,0 +1,38 @@
+@use "global" as *;
+
+/* ----- タブ ----- */
+.tab__menu{
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: rem(21);
+  row-gap: rem(16);
+
+  @include mq(md){
+    column-gap: rem(32);
+  }
+}
+
+.tab__menu-item{
+  display: inline-block;
+  width: rem(162);
+  max-width: 100%;
+  padding: rem(5.5) rem(10);
+  font-size: rem(14);
+  @include line-height(22,14);
+  color: $accent-green;
+  text-align: center;
+  text-transform: uppercase;
+  border: rem(1) solid $accent-green;
+  background-color: $white;
+  transition: .4s;
+  cursor: pointer;
+
+  @include mq(md){
+    padding: rem(6) rem(10);
+  }
+}
+
+.tab__menu-item.current{
+  color: $white;
+  background-color: $accent-green;
+}
