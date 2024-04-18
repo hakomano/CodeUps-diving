@@ -8,3 +8,12 @@
     margin-top: rem(147); //お問い合わせ・サンクス・利用規約・プラ・FAQ
   }
 }
+
+// ダイビング情報ページ用
+.sub-layout--info{
+  margin-top: rem(120);
+
+  @include mq(md){
+    margin-top: rem(148);
+  }
+}

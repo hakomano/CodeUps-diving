@@ -1,18 +1,14 @@
 @use "global" as *;
 
 /* ----- 下層ページのお客様の声ページ ----- */
-.sub-voice__inner{
+.sub-info__inner{
   max-width: rem(600); //タブレット時の間延び防止用
 }
 
-.sub-voice__tab-content{
-  margin-top: rem(40);
-}
-
-.sub-voice__pagenavi{
-  margin-top: rem(80);
+.sub-info__tab-content{
+  margin-top: rem(15);
 
   @include mq(md){
-    margin-top: rem(72);
+    margin-top: rem(25);
   }
 }
