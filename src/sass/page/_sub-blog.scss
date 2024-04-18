@@ -1,6 +1,10 @@
 @use "global" as *;
 
 /* ----- 下層ページのBlog(ブログ一覧) ----- */
+.sub-blog__inner{
+  max-width: rem(600); //タブレット時の間延び防止用
+}
+
 .sub-blog__container{
   display: flex;
   flex-direction: column;

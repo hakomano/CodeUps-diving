@@ -26,6 +26,14 @@
   }
 }
 
+//Aboutページ用
+.sub-bg--about::before{
+
+  @include mq(md){
+    top: rem(-151);
+  }
+}
+
 //PCのみイラスト非表示(サイトマップページ)
 .sub-bg--pc-none::before{
   top: rem(-10);
