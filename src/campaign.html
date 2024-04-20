@@ -63,13 +63,13 @@
                     <a href="./campaign.html">キャンペーン</a>
                     <ul class="nav-list__child">
                       <li class="nav-list__child-item">
-                        <a href="#">ライセンス取得</a>
+                        <a href="./campaign.html#tab-2">ライセンス取得</a>
                       </li>
                       <li class="nav-list__child-item">
-                        <a href="#">貸切体験ダイビング</a>
+                        <a href="./campaign.html#tab-3">貸切体験ダイビング</a>
                       </li>
                       <li class="nav-list__child-item">
-                        <a href="#">ナイトダイビング</a>
+                        <a href="./campaign.html#tab-4">ナイトダイビング</a>
                       </li>
                     </ul>
                   </li>
@@ -86,13 +86,13 @@
                     <a href="./information.html">ダイビング情報</a>
                     <ul class="nav-list__child">
                       <li class="nav-list__child-item">
-                        <a href="#">ライセンス講習</a>
+                        <a href="./information.html#tab-1">ライセンス講習</a>
                       </li>
                       <li class="nav-list__child-item">
-                        <a href="#">体験ダイビング</a>
+                        <a href="./information.html#tab-2">体験ダイビング</a>
                       </li>
                       <li class="nav-list__child-item">
-                        <a href="#">ファンダイビング</a>
+                        <a href="./information.html#tab-3">ファンダイビング</a>
                       </li>
                     </ul>
                   </li>
@@ -116,13 +116,13 @@
                     <a href="./price.html">料金一覧</a>
                     <ul class="nav-list__child">
                       <li class="nav-list__child-item">
-                        <a href="#">ライセンス講習</a>
+                        <a href="./price.html#price-license">ライセンス講習</a>
                       </li>
                       <li class="nav-list__child-item">
-                        <a href="#">体験ダイビング</a>
+                        <a href="./price.html#price-fundiving">体験ダイビング</a>
                       </li>
                       <li class="nav-list__child-item">
-                        <a href="#">ファンダイビング</a>
+                        <a href="./price.html#price-experience">ファンダイビング</a>
                       </li>
                     </ul>
                   </li>
@@ -187,6 +187,7 @@
     </header>
 
     <main>
+      <!-- 下層ファーストビュー -->
       <section class="sub-fv">
         <h1 class="sub-fv__title">Campaign</h1>
         <div class="sub-fv__img">
@@ -208,14 +209,14 @@
                   <a itemprop="item" href="./index.html">
                       <span itemprop="name">top</span>
                   </a>
-                  <meta itemprop="position" content="1" />
+                  <meta itemprop="position" content="1">
               </li>
               <li itemprop="itemListElement" itemscope
                   itemtype="https://schema.org/ListItem">
                   <a itemprop="item" href="./campaign.html">
                       <span itemprop="name">キャンペーン</span>
                   </a>
-                  <meta itemprop="position" content="2" />
+                  <meta itemprop="position" content="2">
               </li>
             </ol>
           </nav>
@@ -229,15 +230,15 @@
           <div class="sub-campaign__bg sub-bg">
             <div class="sub-campaign__tab tab">
               <ul class="tab__menu">
-                <li class="tab__menu-item js-tab current">all</li>
-                <li class="tab__menu-item js-tab">ライセンス講習</li>
-                <li class="tab__menu-item js-tab">ファンダイビング</li>
-                <li class="tab__menu-item js-tab">体験ダイビング</li>
+                <li class="tab__menu-item js-tab current" id="tab-1-menu">all</li>
+                <li class="tab__menu-item js-tab" id="tab-2-menu">ライセンス講習</li>
+                <li class="tab__menu-item js-tab" id="tab-3-menu">ファンダイビング</li>
+                <li class="tab__menu-item js-tab" id="tab-4-menu">体験ダイビング</li>
               </ul>
             </div>
             <div class="sub-campaign__tab-content tab-content">
               <!-- ALLタブ中身 -->
-              <div class="tab-content__box tab-content__box--padding js-tab-content">
+              <div class="tab-content__box tab-content__box--padding js-tab-content" id="tab-1">
                 <ul class="tab-content__list campaign-list campaign-list--2col">
                   <li class="campaign-list__item campaign-card">
                     <div class="campaign-card__wrap">
@@ -248,9 +249,9 @@
                         <p class="campaign-card__category category-label">
                           ライセンス講習
                         </p>
-                        <h3 class="campaign-card__title campaign-card__title--sub">
+                        <h2 class="campaign-card__title campaign-card__title--sub">
                           ライセンス取得
-                        </h3>
+                        </h2>
                         <div class="campaign-card__bottom">
                           <p class="campaign-card__text campaign-card__text--sub">
                             全部コミコミ(お一人様)
@@ -275,7 +276,7 @@
                             ご予約・お問い合わせはコチラ
                           </p>
                           <div class="campaign-card__btn">
-                            <a href="#" class="button"><div></div><span>contact us</span></a>
+                            <a href="./contact.html" class="button"><div></div><span>contact us</span></a>
                           </div>
                         </div>
                       </div>
@@ -290,9 +291,9 @@
                         <p class="campaign-card__category category-label">
                           体験ダイビング
                         </p>
-                        <h3 class="campaign-card__title campaign-card__title--sub">
+                        <h2 class="campaign-card__title campaign-card__title--sub">
                           貸切体験ダイビング
-                        </h3>
+                        </h2>
                         <div class="campaign-card__bottom">
                           <p class="campaign-card__text campaign-card__text--sub">
                             全部コミコミ(お一人様)
@@ -317,7 +318,7 @@
                             ご予約・お問い合わせはコチラ
                           </p>
                           <div class="campaign-card__btn">
-                            <a href="#" class="button"><div></div><span>contact us</span></a>
+                            <a href="./contact.html" class="button"><div></div><span>contact us</span></a>
                           </div>
                         </div>
                       </div>
@@ -332,9 +333,9 @@
                         <p class="campaign-card__category category-label">
                           体験ダイビング
                         </p>
-                        <h3 class="campaign-card__title campaign-card__title--sub">
+                        <h2 class="campaign-card__title campaign-card__title--sub">
                           ナイトダイビング
-                        </h3>
+                        </h2>
                         <div class="campaign-card__bottom">
                           <p class="campaign-card__text campaign-card__text--sub">
                             全部コミコミ(お一人様)
@@ -359,7 +360,7 @@
                             ご予約・お問い合わせはコチラ
                           </p>
                           <div class="campaign-card__btn">
-                            <a href="#" class="button"><div></div><span>contact us</span></a>
+                            <a href="./contact.html" class="button"><div></div><span>contact us</span></a>
                           </div>
                         </div>
                       </div>
@@ -374,9 +375,9 @@
                         <p class="campaign-card__category category-label">
                           ファンダイビング
                         </p>
-                        <h3 class="campaign-card__title campaign-card__title--sub">
+                        <h2 class="campaign-card__title campaign-card__title--sub">
                           貸切ファンダイビング
-                        </h3>
+                        </h2>
                         <div class="campaign-card__bottom">
                           <p class="campaign-card__text campaign-card__text--sub">
                             全部コミコミ(お一人様)
@@ -401,7 +402,7 @@
                             ご予約・お問い合わせはコチラ
                           </p>
                           <div class="campaign-card__btn">
-                            <a href="#" class="button"><div></div><span>contact us</span></a>
+                            <a href="./contact.html" class="button"><div></div><span>contact us</span></a>
                           </div>
                         </div>
                       </div>
@@ -410,7 +411,7 @@
                 </ul>
               </div>
               <!-- ライセンス講習タブ中身 -->
-              <div class="tab-content__box tab-content__box--padding js-tab-content">
+              <div class="tab-content__box tab-content__box--padding js-tab-content" id="tab-2">
                 <ul class="tab-content__list campaign-list campaign-list--2col">
                   <li class="campaign-list__item campaign-card">
                     <div class="campaign-card__wrap">
@@ -421,9 +422,9 @@
                         <p class="campaign-card__category category-label">
                           ライセンス講習
                         </p>
-                        <h3 class="campaign-card__title campaign-card__title--sub">
+                        <h2 class="campaign-card__title campaign-card__title--sub">
                           ライセンス取得
-                        </h3>
+                        </h2>
                         <div class="campaign-card__bottom">
                           <p class="campaign-card__text campaign-card__text--sub">
                             全部コミコミ(お一人様)
@@ -448,7 +449,7 @@
                             ご予約・お問い合わせはコチラ
                           </p>
                           <div class="campaign-card__btn">
-                            <a href="#" class="button"><div></div><span>contact us</span></a>
+                            <a href="./contact.html" class="button"><div></div><span>contact us</span></a>
                           </div>
                         </div>
                       </div>
@@ -463,9 +464,9 @@
                         <p class="campaign-card__category category-label">
                           ライセンス講習
                         </p>
-                        <h3 class="campaign-card__title campaign-card__title--sub">
+                        <h2 class="campaign-card__title campaign-card__title--sub">
                           ライセンス取得
-                        </h3>
+                        </h2>
                         <div class="campaign-card__bottom">
                           <p class="campaign-card__text campaign-card__text--sub">
                             全部コミコミ(お一人様)
@@ -490,7 +491,7 @@
                             ご予約・お問い合わせはコチラ
                           </p>
                           <div class="campaign-card__btn">
-                            <a href="#" class="button"><div></div><span>contact us</span></a>
+                            <a href="./contact.html" class="button"><div></div><span>contact us</span></a>
                           </div>
                         </div>
                       </div>
@@ -505,9 +506,9 @@
                         <p class="campaign-card__category category-label">
                           ライセンス講習
                         </p>
-                        <h3 class="campaign-card__title campaign-card__title--sub">
+                        <h2 class="campaign-card__title campaign-card__title--sub">
                           ライセンス取得
-                        </h3>
+                        </h2>
                         <div class="campaign-card__bottom">
                           <p class="campaign-card__text campaign-card__text--sub">
                             全部コミコミ(お一人様)
@@ -532,7 +533,7 @@
                             ご予約・お問い合わせはコチラ
                           </p>
                           <div class="campaign-card__btn">
-                            <a href="#" class="button"><div></div><span>contact us</span></a>
+                            <a href="./contact.html" class="button"><div></div><span>contact us</span></a>
                           </div>
                         </div>
                       </div>
@@ -547,9 +548,9 @@
                         <p class="campaign-card__category category-label">
                           ライセンス講習
                         </p>
-                        <h3 class="campaign-card__title campaign-card__title--sub">
+                        <h2 class="campaign-card__title campaign-card__title--sub">
                           ライセンス取得
-                        </h3>
+                        </h2>
                         <div class="campaign-card__bottom">
                           <p class="campaign-card__text campaign-card__text--sub">
                             全部コミコミ(お一人様)
@@ -574,7 +575,7 @@
                             ご予約・お問い合わせはコチラ
                           </p>
                           <div class="campaign-card__btn">
-                            <a href="#" class="button"><div></div><span>contact us</span></a>
+                            <a href="./contact.html" class="button"><div></div><span>contact us</span></a>
                           </div>
                         </div>
                       </div>
@@ -583,7 +584,7 @@
                 </ul>
               </div>
               <!-- ファンダイビングタブ中身 -->
-              <div class="tab-content__box tab-content__box--padding js-tab-content">
+              <div class="tab-content__box tab-content__box--padding js-tab-content" id="tab-3">
                 <ul class="tab-content__list campaign-list campaign-list--2col">
                   <li class="campaign-list__item campaign-card">
                     <div class="campaign-card__wrap">
@@ -594,9 +595,9 @@
                         <p class="campaign-card__category category-label">
                           ファンダイビング
                         </p>
-                        <h3 class="campaign-card__title campaign-card__title--sub">
+                        <h2 class="campaign-card__title campaign-card__title--sub">
                           貸切ファンダイビング
-                        </h3>
+                        </h2>
                         <div class="campaign-card__bottom">
                           <p class="campaign-card__text campaign-card__text--sub">
                             全部コミコミ(お一人様)
@@ -621,7 +622,7 @@
                             ご予約・お問い合わせはコチラ
                           </p>
                           <div class="campaign-card__btn">
-                            <a href="#" class="button"><div></div><span>contact us</span></a>
+                            <a href="./contact.html" class="button"><div></div><span>contact us</span></a>
                           </div>
                         </div>
                       </div>
@@ -635,9 +636,9 @@
                         <p class="campaign-card__category category-label">
                           ファンダイビング
                         </p>
-                        <h3 class="campaign-card__title campaign-card__title--sub">
+                        <h2 class="campaign-card__title campaign-card__title--sub">
                           貸切ファンダイビング
-                        </h3>
+                        </h2>
                         <div class="campaign-card__bottom">
                           <p class="campaign-card__text campaign-card__text--sub">
                             全部コミコミ(お一人様)
@@ -662,12 +663,13 @@
                             ご予約・お問い合わせはコチラ
                           </p>
                           <div class="campaign-card__btn">
-                            <a href="#" class="button"><div></div><span>contact us</span></a>
+                            <a href="./contact.html" class="button"><div></div><span>contact us</span></a>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </li><li class="campaign-list__item campaign-card">
+                  </li>
+                  <li class="campaign-list__item campaign-card">
                     <div class="campaign-card__wrap">
                       <figure class="campaign-card__img">
                         <img src="./assets/images/campaign/campaign4@2x.jpg" alt="キャンペーン画像4" width="520" height="347" loading="lazy" decoding="async">
@@ -676,9 +678,9 @@
                         <p class="campaign-card__category category-label">
                           ファンダイビング
                         </p>
-                        <h3 class="campaign-card__title campaign-card__title--sub">
+                        <h2 class="campaign-card__title campaign-card__title--sub">
                           貸切ファンダイビング
-                        </h3>
+                        </h2>
                         <div class="campaign-card__bottom">
                           <p class="campaign-card__text campaign-card__text--sub">
                             全部コミコミ(お一人様)
@@ -703,12 +705,13 @@
                             ご予約・お問い合わせはコチラ
                           </p>
                           <div class="campaign-card__btn">
-                            <a href="#" class="button"><div></div><span>contact us</span></a>
+                            <a href="./contact.html" class="button"><div></div><span>contact us</span></a>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </li><li class="campaign-list__item campaign-card">
+                  </li>
+                  <li class="campaign-list__item campaign-card">
                     <div class="campaign-card__wrap">
                       <figure class="campaign-card__img">
                         <img src="./assets/images/campaign/campaign4@2x.jpg" alt="キャンペーン画像4" width="520" height="347" loading="lazy" decoding="async">
@@ -717,9 +720,9 @@
                         <p class="campaign-card__category category-label">
                           ファンダイビング
                         </p>
-                        <h3 class="campaign-card__title campaign-card__title--sub">
+                        <h2 class="campaign-card__title campaign-card__title--sub">
                           貸切ファンダイビング
-                        </h3>
+                        </h2>
                         <div class="campaign-card__bottom">
                           <p class="campaign-card__text campaign-card__text--sub">
                             全部コミコミ(お一人様)
@@ -744,7 +747,7 @@
                             ご予約・お問い合わせはコチラ
                           </p>
                           <div class="campaign-card__btn">
-                            <a href="#" class="button"><div></div><span>contact us</span></a>
+                            <a href="./contact.html" class="button"><div></div><span>contact us</span></a>
                           </div>
                         </div>
                       </div>
@@ -753,7 +756,7 @@
                 </ul>
               </div>
               <!-- 体験ダイビングタブ中身 -->
-              <div class="tab-content__box tab-content__box--padding js-tab-content">
+              <div class="tab-content__box tab-content__box--padding js-tab-content" id="tab-4">
                 <ul class="tab-content__list campaign-list campaign-list--2col">
                   <li class="campaign-list__item campaign-card">
                     <div class="campaign-card__wrap">
@@ -764,9 +767,9 @@
                         <p class="campaign-card__category category-label">
                           体験ダイビング
                         </p>
-                        <h3 class="campaign-card__title campaign-card__title--sub">
+                        <h2 class="campaign-card__title campaign-card__title--sub">
                           貸切体験ダイビング
-                        </h3>
+                        </h2>
                         <div class="campaign-card__bottom">
                           <p class="campaign-card__text campaign-card__text--sub">
                             全部コミコミ(お一人様)
@@ -791,7 +794,7 @@
                             ご予約・お問い合わせはコチラ
                           </p>
                           <div class="campaign-card__btn">
-                            <a href="#" class="button"><div></div><span>contact us</span></a>
+                            <a href="./contact.html" class="button"><div></div><span>contact us</span></a>
                           </div>
                         </div>
                       </div>
@@ -806,9 +809,9 @@
                         <p class="campaign-card__category category-label">
                           体験ダイビング
                         </p>
-                        <h3 class="campaign-card__title campaign-card__title--sub">
+                        <h2 class="campaign-card__title campaign-card__title--sub">
                           ナイトダイビング
-                        </h3>
+                        </h2>
                         <div class="campaign-card__bottom">
                           <p class="campaign-card__text campaign-card__text--sub">
                             全部コミコミ(お一人様)
@@ -833,7 +836,7 @@
                             ご予約・お問い合わせはコチラ
                           </p>
                           <div class="campaign-card__btn">
-                            <a href="#" class="button"><div></div><span>contact us</span></a>
+                            <a href="./contact.html" class="button"><div></div><span>contact us</span></a>
                           </div>
                         </div>
                       </div>
@@ -848,9 +851,9 @@
                         <p class="campaign-card__category category-label">
                           体験ダイビング
                         </p>
-                        <h3 class="campaign-card__title campaign-card__title--sub">
+                        <h2 class="campaign-card__title campaign-card__title--sub">
                           貸切体験ダイビング
-                        </h3>
+                        </h2>
                         <div class="campaign-card__bottom">
                           <p class="campaign-card__text campaign-card__text--sub">
                             全部コミコミ(お一人様)
@@ -875,7 +878,7 @@
                             ご予約・お問い合わせはコチラ
                           </p>
                           <div class="campaign-card__btn">
-                            <a href="#" class="button"><div></div><span>contact us</span></a>
+                            <a href="./contact.html" class="button"><div></div><span>contact us</span></a>
                           </div>
                         </div>
                       </div>
@@ -890,9 +893,9 @@
                         <p class="campaign-card__category category-label">
                           体験ダイビング
                         </p>
-                        <h3 class="campaign-card__title campaign-card__title--sub">
+                        <h2 class="campaign-card__title campaign-card__title--sub">
                           ナイトダイビング
-                        </h3>
+                        </h2>
                         <div class="campaign-card__bottom">
                           <p class="campaign-card__text campaign-card__text--sub">
                             全部コミコミ(お一人様)
@@ -917,7 +920,7 @@
                             ご予約・お問い合わせはコチラ
                           </p>
                           <div class="campaign-card__btn">
-                            <a href="#" class="button"><div></div><span>contact us</span></a>
+                            <a href="./contact.html" class="button"><div></div><span>contact us</span></a>
                           </div>
                         </div>
                       </div>
@@ -926,7 +929,7 @@
                 </ul>
               </div>
 
-              <!-- ページネーション ※WP化時にプラグインWP-PageNavi使用予定 -->
+              <!-- ページネーション ※WP化時にプラグインWP-PageNavi使用予定(WP時は/ul下に記述) -->
               <div class="sub-campaign__pagenavi pagenavi">
                 <div class="pagenavi__inner">
                   <!-- WP-PageNaviで出力される部分 ここから -->
@@ -981,7 +984,7 @@
                 ご予約・お問い合わせはコチラ
               </p>
               <div class="cta__btn">
-                <a href="#" class="button"><div></div><span>contact us</span></a>
+                <a href="./contact.html" class="button"><div></div><span>contact us</span></a>
               </div>
             </div>
           </div>
@@ -1015,13 +1018,13 @@
                   <a href="./campaign.html">キャンペーン</a>
                   <ul class="nav-list__child">
                     <li class="nav-list__child-item">
-                      <a href="#">ライセンス取得</a>
+                      <a href="./campaign.html#tab-2">ライセンス取得</a>
                     </li>
                     <li class="nav-list__child-item">
-                      <a href="#">貸切体験ダイビング</a>
+                      <a href="./campaign.html#tab-3">貸切体験ダイビング</a>
                     </li>
                     <li class="nav-list__child-item">
-                      <a href="#">ナイトダイビング</a>
+                      <a href="./campaign.html#tab-4">ナイトダイビング</a>
                     </li>
                   </ul>
                 </li>
@@ -1038,13 +1041,13 @@
                   <a href="./information.html">ダイビング情報</a>
                   <ul class="nav-list__child">
                     <li class="nav-list__child-item">
-                      <a href="#">ライセンス講習</a>
+                      <a href="./information.html#tab-1">ライセンス講習</a>
                     </li>
                     <li class="nav-list__child-item">
-                      <a href="#">体験ダイビング</a>
+                      <a href="./information.html#tab-2">体験ダイビング</a>
                     </li>
                     <li class="nav-list__child-item">
-                      <a href="#">ファンダイビング</a>
+                      <a href="./information.html#tab-3">ファンダイビング</a>
                     </li>
                   </ul>
                 </li>
@@ -1068,13 +1071,13 @@
                   <a href="./price.html">料金一覧</a>
                   <ul class="nav-list__child">
                     <li class="nav-list__child-item">
-                      <a href="#">ライセンス講習</a>
+                      <a href="./price.html#price-license">ライセンス講習</a>
                     </li>
                     <li class="nav-list__child-item">
-                      <a href="#">体験ダイビング</a>
+                      <a href="./price.html#price-fundiving">体験ダイビング</a>
                     </li>
                     <li class="nav-list__child-item">
-                      <a href="#">ファンダイビング</a>
+                      <a href="./price.html#price-experience">ファンダイビング</a>
                     </li>
                   </ul>
                 </li>

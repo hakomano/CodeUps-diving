@@ -4,13 +4,13 @@
 .wp-pagenavi {
 	clear: both;
 	text-align: center;
+  white-space: nowrap;
 }
 
 .wp-pagenavi a,
 .wp-pagenavi span {
   display: inline-block;
   padding: rem(10.2) rem(13.55);
-  // padding: rem(8.6) rem(13.55);
   font-size: rem(16);
   font-family: $second-en-font-family;
   font-weight: $bold;

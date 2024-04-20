@@ -79,14 +79,6 @@
 
   @include mq(md){
     justify-content: space-between;
-    column-gap: rem(124);
-  }
-}
-
-.nav-list__left--map, .nav-list__right--map{
-
-  @include mq(md){
-    column-gap: rem(124);
   }
 }
 

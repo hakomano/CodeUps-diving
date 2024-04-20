@@ -26,10 +26,22 @@
   max-height: calc(100% - rem(20));
   padding: rem(10);
   overflow-y: scroll;
+  //スクロールバー非表示
+  -ms-overflow-style: none; //IE・Edge用
+  scrollbar-width: none; //Firefox用
 
   @include mq(md){
     width: min(calc(100% - rem(40)), rem(1000));
     max-height: calc(100% - rem(40));
     padding: rem(40);
   }
+}
+
+//スクロールバー非表示 -- Chrome・Safari用
+.contents_box::-webkit-scrollbar{
+  display: none;
+}
+
+.modal__content img:hover{
+  opacity: 1;
 }

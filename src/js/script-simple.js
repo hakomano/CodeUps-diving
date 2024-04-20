@@ -156,15 +156,24 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   //========================================================*
   // タブメニュー
   //========================================================*
-  $(function () {
-    $(".js-tab-content:first-of-type").css("display", "block");
-    $(".js-tab").on("click", function () {
-      $(".current").removeClass("current");
-      $(this).addClass("current");
-      const index = $(this).index();
-      $(".js-tab-content").hide().eq(index).fadeIn(300);
-    });
+  //タブ指定リンク(指定タブを開いた状態で表示)
+  $(function (){
+    if(location.href.match('#tab')) {
+      $(".js-tab").removeClass("current");
+      let hash = $(location).attr('hash');
+      $(".js-tab-content" + hash).css('display','block');
+      $(".js-tab" + hash + "-menu").addClass("current");
+    }else{
+      $(".js-tab-content:first-of-type").css("display", "block");
+    }
+  });
+
+  //タブメニューをクリックで該当するコンテンツ表示
+  $(".js-tab").on("click", function () {
+    $(".js-tab.current").removeClass("current");
+    $(this).addClass("current");
+    const index = $(this).index();
+    $(".js-tab-content").hide().eq(index).fadeIn(400);
   });
 
 });
-

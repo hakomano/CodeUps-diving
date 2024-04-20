@@ -12,7 +12,6 @@
 
 .blog-card__img {
   width: 100%;
-  // padding: rem(16);
   overflow: hidden;
 }
 
@@ -25,13 +24,8 @@
 }
 
 .blog-card__content {
-  // padding: rem(3) rem(16) rem(24);
   margin-top: rem(20);
   text-align: left;
-
-  @include mq(md){
-    // padding: rem(2) rem(16) rem(24);
-  }
 }
 
 .blog-card__date {

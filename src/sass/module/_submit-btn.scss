@@ -1,6 +1,6 @@
 @use "global" as *;
-/* ----- 共通ボタン ----- */
-.button{
+/* ----- 送信ボタン ----- */
+.submit-btn{
   width: rem(202);
   max-width: 100%;
   display: inline-block; //blockではなくinline-blockの方が親要素で中央揃えなどの指定ができる
@@ -18,7 +18,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.button > div{
+.submit-btn > .square{
   width: rem(202);
   height: rem(54);
   border: rem(1) solid $accent-green;
@@ -28,23 +28,23 @@
   z-index: -5;
 }
 
-.button span{
+.submit-btn .letter{
   display: inline-block;
-  padding-right: rem(48);
+  padding-right: rem(56);
   position: relative;
 }
 
-.button span::first-letter{
+.submit-btn .letter::first-letter{
   text-transform: capitalize;
 }
 
 //矢印
-.button span::before, .button span::after{
+.submit-btn .letter::before, .submit-btn .letter::after{
   content: "";
   position: absolute;
 }
 
-.button span::before {
+.submit-btn .letter::before {
   width: rem(10);
   height: rem(10);
   right: rem(1);
@@ -53,7 +53,7 @@
   border-top: rem(1) solid $white;
 }
 
-.button span::after {
+.submit-btn .letter::after {
   width: rem(40);
   height: rem(1);
   right: 0;
@@ -63,7 +63,7 @@
 }
 
 //ホバースライド後
-.button::after{
+.submit-btn::after{
   background: $white;
   position: absolute;
   top: 0;
@@ -77,75 +77,38 @@
   z-index: -1;
 }
 
-//色反転ボタン(404ページ用)
-.button--reversal{
-  border: rem(1) solid $white;
-  background: $white;
-  color: $accent-green;
-  text-transform: capitalize;
-}
-
-.button--reversal > div{
-  border: rem(1) solid $white;
-}
-
-.button--reversal span{
-  padding-right: rem(57);
-}
-
-.button--reversal span::before{
-  border-top: rem(1) solid $accent-green;
-}
-
-.button--reversal span::after{
-  background: $accent-green;
-}
-
-.button--reversal::after{
-  background: $accent-green;
-}
-
 //ボタンホバー・アクティブ処理(hover使用可否で切替)
 @media (hover: hover) {
   // hoverが使える端末 PC想定
-  .button:hover {
+  .submit-btn:hover {
     color: $accent-green;
     opacity: 1;
   }
-  .button:hover span::before{
+  .submit-btn:hover .letter::before{
     border-top: rem(1) solid $accent-green;
   }
-  .button:hover span::after{
+  .submit-btn:hover .letter::after{
     background: $accent-green;
   }
-  .button:hover::after{
+  .submit-btn:hover::after{
     transform: scale(1, 1);
   }
-  // 色反転ボタン時
-  .button--reversal:hover{
-    color: $white;
-  }
-  .button--reversal:hover span::before{
-    border-top: rem(1) solid $white;
-  }
-  .button--reversal:hover span::after{
-    background: $white;
-  }
+
   // ボタンクリック時(押したことが分かりやすいように)
-  .button:active{
+  .submit-btn:active{
     transform: translate(rem(4), rem(4));
   }
-  .button:active div{
+  .submit-btn:active .square{
     opacity: 0;
   }
 }
 @media (hover: none) {
   // hoverが使えない端末 スマホ・タブレット想定
-  .button:active {
+  .submit-btn:active {
     opacity: 1;
     transform: translate(rem(4), rem(4));
   }
-  .button:active div{
+  .submit-btn:active .square{
     opacity: 0;
   }
 }
