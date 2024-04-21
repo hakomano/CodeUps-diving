@@ -28,7 +28,6 @@
 
 // Aboutページ用
 .sub-bg--about::before{
-
   @include mq(md){
     top: rem(-151);
   }
@@ -37,10 +36,6 @@
 // Informationページ用
 .sub-bg--info::before{
   top: rem(-94);
-
-  @include mq(md){
-    
-  }
 }
 
 //PCのみイラスト非表示(サイトマップページ)

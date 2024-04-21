@@ -1,10 +1,6 @@
 @use "global" as *;
 
 /* ----- お問い合わせフォーム ----- */
-.contact-form {
-
-}
-
 .contact-form__item {
   display: flex;
   flex-direction: column;
@@ -111,9 +107,8 @@
 .contact-form__checkbox input + span::before {
   content: "";
   position: absolute;
-  top: 55%;
+  top: rem(5);
   left: 0;
-  transform: translateY(-50%);
   background-color: $white;
   border: rem(1) solid $accent-green;
   display: block;
@@ -129,11 +124,10 @@
 
 .contact-form__checkbox input + span::after {
   content: "";
-  margin-top: rem(-2);
   position: absolute;
-  top: 55%;
+  top: rem(8);
   left: rem(3);
-  transform: translateY(-50%) rotate(-45deg);
+  transform: rotate(-45deg);
   display: block;
   width: rem(9);
   height: rem(5);
@@ -243,7 +237,6 @@
 .contact-form__privacy input:checked + span::after {
   opacity: 1;
 }
-
 
 .contact-form__submit {
   margin-top: rem(24);

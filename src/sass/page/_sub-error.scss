@@ -48,7 +48,6 @@
 .sub-error__text{
   margin-top: rem(2);
   font-size: rem(16);
-  font-family: $second-en-font-family;
   line-height: 1.56;
 
   @include mq(md){

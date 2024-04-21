@@ -3,10 +3,10 @@
 /* ----- パンくずリスト(共通) ----- */
 //WPプラグイン「Breadcrumb NavXT」使用予定
 .sub-breadcrumbs{
-  margin-top: rem(6); //サンクス・お問い合わせ・利用規約・プラ・map・faq
+  margin-top: rem(6);
 
   @include mq(md){
-    margin-top: rem(5.5); //サンクス・お問い合わせ・利用規約・プラ・map・faq
+    margin-top: rem(5.5);
   }
 }
 
