@@ -1,11 +1,19 @@
 @use "global" as *;
 
 /* ----- お客様の声(Voice)カード ----- */
+.voice-card{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
 .voice-card__wrap{
   display: block;
   height: 100%;
   padding: rem(15) rem(16) rem(23);
   box-shadow: $card-shadow;
+  display: flex;
+  flex-direction: column;
 
   @include mq(md){
     padding: rem(24);

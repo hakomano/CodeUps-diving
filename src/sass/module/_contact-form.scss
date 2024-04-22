@@ -73,6 +73,12 @@
   background-color: $white;
 }
 
+//入力欄フォーカス時
+.contact-form__input:focus, .contact-form__textarea:focus{
+  outline: auto rem(1) $accent-green; //枠線太く
+  caret-color: $accent-green; //入力キャレットメインカラーに
+}
+
 //未入力エラー時の入力欄カラー変更
 .contact-form__input.error, .contact-form__textarea.error {
 	border: rem(1) solid $red;

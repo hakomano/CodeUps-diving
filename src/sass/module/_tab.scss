@@ -2,13 +2,14 @@
 
 /* ----- タブ ----- */
 .tab__menu{
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   column-gap: rem(21);
   row-gap: rem(16);
   justify-content: center;
 
   @include mq(md){
+    display: flex;
     column-gap: rem(32);
     justify-content: flex-start;
   }
@@ -16,8 +17,7 @@
 
 .tab__menu-item{
   display: inline-block;
-  width: rem(162);
-  max-width: 100%;
+  width: 100%;
   padding: rem(5.5) rem(10);
   font-size: rem(14);
   @include line-height(22,14);
@@ -31,6 +31,8 @@
 
   @include mq(md){
     padding: rem(6) rem(10);
+    width: rem(162);
+    max-width: 100%;
   }
 }
 
