@@ -78,8 +78,8 @@
   }
 }
 
-// 選択時のタブメニュー
-.tab-largish__menu-item.current{
+// 選択時・ホバー時のタブメニュー
+.tab-largish__menu-item.current, .tab-largish__menu-item:hover{
   color: $white;
   background-color: $accent-green;
 
@@ -88,21 +88,21 @@
   }
 }
 
-.tab-largish__menu-item:nth-of-type(1).current span::before{
+.tab-largish__menu-item:nth-of-type(1).current span::before, .tab-largish__menu-item:nth-of-type(1):hover span::before{
   @include mq(md){
     background: url(../images/common/whale-white.svg) no-repeat;
     background-size: contain;
   }
 }
 
-.tab-largish__menu-item:nth-of-type(2).current span::before{
+.tab-largish__menu-item:nth-of-type(2).current span::before, .tab-largish__menu-item:nth-of-type(2):hover span::before{
   @include mq(md){
     background: url(../images/common/shark-white.svg) no-repeat;
     background-size: contain;
   }
 }
 
-.tab-largish__menu-item:nth-of-type(3).current span::before{
+.tab-largish__menu-item:nth-of-type(3).current span::before, .tab-largish__menu-item:nth-of-type(3):hover span::before{
   @include mq(md){
     background: url(../images/common/fish-icon-white.svg) no-repeat;
     background-size: contain;

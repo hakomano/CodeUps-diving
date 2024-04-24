@@ -15,7 +15,7 @@
   }
 }
 
-.tab__menu-item{
+.tab__menu-item a{
   display: inline-block;
   width: 100%;
   padding: rem(5.5) rem(10);
@@ -26,7 +26,7 @@
   text-transform: uppercase;
   border: rem(1) solid $accent-green;
   background-color: $white;
-  transition: .4s;
+  transition: .3s;
   cursor: pointer;
 
   @include mq(md){
@@ -36,7 +36,11 @@
   }
 }
 
-.tab__menu-item.current, .tab__menu-item:hover{
+.tab__menu-item.current a, .tab__menu-item a:hover{
   color: $white;
   background-color: $accent-green;
+}
+
+.tab__menu-item a:hover{
+  opacity: 1;
 }

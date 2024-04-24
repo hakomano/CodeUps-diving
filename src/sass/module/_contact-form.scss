@@ -218,6 +218,19 @@
   height: rem(22);
 }
 
+.contact-form__privacy a{
+  color: $accent-green;
+  text-decoration: underline;
+  text-decoration-color: $accent-green;
+  text-underline-offset: rem(3);
+}
+
+//チェックボックスTabキーフォーカス時
+.contact-form__checkbox input:focus-visible + span::before,
+.contact-form__privacy input:focus-visible + span::before{
+  outline: auto rem(2) $accent-green;
+}
+
 //未選択エラー時のチェックボックス色変更
 .contact-form__privacy input.error + span::before{
   border: rem(1) solid $red;

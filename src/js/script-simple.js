@@ -136,22 +136,20 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(".js-modal").fadeIn(400);
 
     // クリックした画像のHTML要素を取得して、置き換える
-    $(".modal__content").html($(this).prop('outerHTML'));
-
-    // スクロール位置を戻す
-    $(".modal__container").scrollTop(0);
+    $(".modal__content").html($(this).prop('innerHTML'));
 
     // サイトのスクロールを禁止にする
     $('html, body').css('overflow', 'hidden');
   });
 
   // 『背景』をクリックしたら、『モーダル本体』を非表示
-  $(".modal__layer").click(function() {
-    $(".js-modal").fadeOut(400);
+  $(".js-modal").click(function() {
+    $(this).fadeOut(400);
 
     // サイトのスクロール禁止を解除する
     $('html, body').removeAttr('style');
   });
+
 
   //========================================================*
   // タブメニュー

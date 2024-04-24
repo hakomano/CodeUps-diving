@@ -36,7 +36,8 @@
   cursor: pointer;
 }
 
-.gallery-list__img--vertical img {
+.gallery-list__item:nth-of-type(6n+1) img,
+.gallery-list__item:nth-of-type(6n+6) img{
   aspect-ratio: 492 / 746;
 }
 
