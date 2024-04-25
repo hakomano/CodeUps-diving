@@ -1,10 +1,6 @@
 @use "global" as *;
 
 /* ----- 下層ページのブログ詳細ページ ----- */
-.sub-single-blog__inner{
-  max-width: rem(600); //タブレット時の間延び防止用
-}
-
 .sub-single-blog__pagenavi{
   margin-top: rem(39);
 

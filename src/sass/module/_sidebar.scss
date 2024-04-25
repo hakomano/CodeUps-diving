@@ -1,16 +1,6 @@
 @use "global" as *;
 
 /* ----- サイドバー ----- */
-.sidebar{
-  padding-inline: rem(25.5);
-
-  @include mq(md){
-    width: 27.2%;
-    max-width: 100%;
-    padding-inline: 0;
-  }
-}
-
 .sidebar__block + .sidebar__block{
   margin-top: rem(81);
 

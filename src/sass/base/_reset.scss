@@ -101,6 +101,7 @@ input[type="radio"] {
   // display: none;//これだとキーボード操作できない
   opacity: 0;
   position: absolute;
+  visibility: hidden;
 }
 
 input[type="submit"],
